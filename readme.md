@@ -23,7 +23,6 @@ Demo结构:
 │   ├── main.js
 │   ├── page
 │   └── static
-├── tree.jpg
 └── tree.md
 ```
 
