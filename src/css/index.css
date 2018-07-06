@@ -1,0 +1,19 @@
+body {
+  background: #b0d7ee;
+}
+.flex {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /*自动添加浏览器前缀*/
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.flex div {
+  width: 100px;
+  height: 100px;
+  color: aliceblue;
+  font-size: 30px;
+  border: 1px solid red;
+  background: url('../img/200*200.jpg') no-repeat;
+}
