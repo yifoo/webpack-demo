@@ -33,5 +33,6 @@ Demo结构:
 5. 利用babel将代码中的ES6语法转为ES5；
 6. 利用postcss-loder 自动追加css浏览器前缀；
 7. 配置了部分代码js和css的压缩;
+8. 可根据环境配置变量,如接口api;
 
 如有疑问可在[Issues区](https://github.com/yifoo/webpack-demo/issues)留言
