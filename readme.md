@@ -32,3 +32,5 @@ Demo结构:
 4. 引入jQuery并生成全局变量，个人认为这是最佳的引入方式；
 5. 利用babel将代码中的ES6语法转为ES5；
 6. 利用postcss-loder 自动追加css浏览器前缀；
+
+如有疑问可在issues留言
