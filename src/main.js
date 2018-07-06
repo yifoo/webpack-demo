@@ -3,7 +3,7 @@
  * @Date: 2018-07-06 10:53:01 
  * @Desc: webpack打包入口
  * @Last Modified by: wuhao
- * @Last Modified time: 2018-07-06 16:17:06
+ * @Last Modified time: 2018-07-06 16:31:12
  */
 import "babel-polyfill";
 import './css/normalize.css';
@@ -21,6 +21,6 @@ window.$ = $;
 if(process.env.NODE_ENV === 'dev') {
   console.log('%c开发环境','color:red')
 }else{
-  console.log('%c生产环境','color:yellow')
+  console.log('%c生产环境','color:orange')
 }
-console.log('jQuery版本',jQuery.fn.jquery);
+console.log('%cjQuery版本','color:green',jQuery.fn.jquery);
