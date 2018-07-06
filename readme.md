@@ -2,6 +2,7 @@
 
 Demo结构:
 
+```cmd
 ├── config
 │   ├── config.js
 │   ├── utils.js
@@ -21,9 +22,10 @@ Demo结构:
 │   ├── lib
 │   ├── main.js
 │   ├── page
-│   └── static	//静态资源文件夹
+│   └── static
 ├── tree.jpg
 └── tree.md
+```
 
 1. webpack版本为3.11.0;
 2. 所有的资源文件都在src路径中,main.js为项目的总入口;
