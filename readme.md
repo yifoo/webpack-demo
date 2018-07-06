@@ -34,4 +34,4 @@ Demo结构:
 6. 利用postcss-loder 自动追加css浏览器前缀；
 7. 配置了部分代码js和css的压缩;
 
-如有疑问可在issues留言
+如有疑问可在[Issues区](https://github.com/yifoo/webpack-demo/issues)留言
