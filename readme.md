@@ -33,4 +33,4 @@ Demo结构:
 5. 利用babel将代码中的ES6语法转为ES5；
 6. 利用postcss-loder 自动追加css浏览器前缀；
 
-如有疑问可在issues留言
+如有疑问可在[Issues区](https://github.com/yifoo/webpack-demo/issues)留言
