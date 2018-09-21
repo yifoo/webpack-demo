@@ -1,4 +1,4 @@
-## Webpack 入门Demo
+## Webpack 入门Demo [结构图](https://www.haohome.top/file/webpack.html)
 
 Demo结构:
 
