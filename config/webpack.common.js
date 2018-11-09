@@ -3,7 +3,7 @@
  * @Date: 2018-06-22 13:57:02 
  * @Desc: webpack基础配置
  * @Last Modified by: wuhao
- * @Last Modified time: 2018-11-09 10:41:36
+ * @Last Modified time: 2018-11-09 15:01:49
  */
 // require("babel-polyfill");
 const path = require('path');
@@ -77,7 +77,7 @@ module.exports = {
       filename: 'index.html',
       template: path.resolve(__dirname, '../src/index.html'),
       chunksSortMode: 'manual',
-      chunks: ['common', 'main', 'index'],
+      chunks: ['common', 'main'],
     }),
     new CopyWebpackPlugin([
       {

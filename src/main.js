@@ -3,7 +3,7 @@
  * @Date: 2018-07-06 10:53:01 
  * @Desc: webpack打包入口
  * @Last Modified by: wuhao
- * @Last Modified time: 2018-11-09 14:14:45
+ * @Last Modified time: 2018-11-09 14:57:43
  */
 import "babel-polyfill";
 import '@/assets/css/normalize.css';

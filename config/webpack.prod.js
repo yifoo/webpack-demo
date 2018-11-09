@@ -3,7 +3,7 @@
  * @Date: 2018-06-08 11:28:16 
  * @Desc: 生产环境
  * @Last Modified by: wuhao
- * @Last Modified time: 2018-11-01 20:46:32
+ * @Last Modified time: 2018-11-09 15:07:22
  */
 process.env.NODE_ENV = 'prod'; // webpack配置内部环境,要注意位置 
 
@@ -30,15 +30,15 @@ module.exports = merge(common, {
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        use: ExtractTextPlugin.extract({fallback: "style-loader",use:'css-loader'}),
+        use: ExtractTextPlugin.extract({fallback: "style-loader",publicPath: "../../",use:'css-loader'}),
       },
       /*编译less并添加浏览器前缀*/
       /**添加publicPath: "../../"路径,解决css的背景图片路径 */
       {
         test: /\.less$/,
         exclude: /node_modules/,
-        use: ExtractTextPlugin.extract({fallback: "style-loader",publicPath: "../../",use: 'css-loader!postcss-loader!less-loader'
-        })
+        // use:[{loader:'css-loader',options:{publicPath: "../../"}},'postcss-loader','less-loader'],
+        use: ExtractTextPlugin.extract({fallback: "style-loader",publicPath: "../../",use: 'css-loader!postcss-loader!less-loader'})
       },
     ],
   },

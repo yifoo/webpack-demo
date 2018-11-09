@@ -1,5 +1,7 @@
 ## Webpack +jQuery 单页面Demo [思维导图](https://www.haohome.top/file/webpack.html)
 
+预览链接:[点击访问](https://www.haohome.top/webpack-spa/)
+
 Demo结构:
 
 ```shell
