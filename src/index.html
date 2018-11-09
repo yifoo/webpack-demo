@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +7,18 @@
   <title>webpack-demo</title>
 </head>
 <body>
-  <h2>webpack+route</h2>
-  <div id="index-page" class="content">
-    <ul>
-      <li><a href="#/index">index</a></li>
-      <li><a href="#/news">news</a></li>
-      <li><a href="#/product">product</a></li>
-    </ul>
-  </div>
-  <div id="main"></div>
+  <header id='header' class='header'>
+    <div class="logo">Webpack 单页面Demo</div>
+  </header>
+  <section>
+    <nav id="nav" class="nav-tab">
+      <ul class='tab'>
+        <li><a class='nav-item' href="#/index">index</a></li>
+        <li><a class='nav-item' href="#/news">news</a></li>
+      </ul>
+    </nav>
+    <div id="container" class='container'>
+    </div>
+  </section>
 </body>
 </html>

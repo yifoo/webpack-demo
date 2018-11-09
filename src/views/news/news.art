@@ -1,3 +1,9 @@
 <div>
-  <h1>消息</h1>
+  <h1>消息页</h1>
+  <br>
+  <a href="#/news/detail">打开详情</a>
+  <hr>
+  <br>
+  <div id="detail">
+  </div>
 </div>

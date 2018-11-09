@@ -4,22 +4,25 @@
 │   ├── utils.js
 │   ├── webpack.common.js
 │   ├── webpack.dev.js
-│   └── webpack.prod.js
+│   ├── webpack.prod.js
+│   └── webpack.test.js
 ├── dist
+│   ├── index.html
+│   └── static
 ├── package-lock.json
 ├── package.json
 ├── postcss.config.js
 ├── readme.md
 ├── src
+│   ├── assets
 │   ├── common
-│   ├── css
-│   ├── img
-│   ├── js
-│   ├── lib
+│   ├── index.html
 │   ├── main.js
-│   ├── page
-│   └── static
-├── tree.jpg
+│   ├── route
+│   └── views
+├── static
+│   ├── favicon.ico
+│   └── lib
 └── tree.md
 
-10 directories, 12 files
+10 directories, 15 files

@@ -3,7 +3,7 @@
  * @Date: 2018-06-22 13:57:02 
  * @Desc: webpack基础配置
  * @Last Modified by: wuhao
- * @Last Modified time: 2018-11-08 23:01:25
+ * @Last Modified time: 2018-11-09 10:41:36
  */
 // require("babel-polyfill");
 const path = require('path');

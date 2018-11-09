@@ -3,9 +3,25 @@
  * @Date: 2018-07-06 10:54:49 
  * @Desc: 公共方法库
  * @Last Modified by: wuhao
- * @Last Modified time: 2018-07-06 13:59:17
+ * @Last Modified time: 2018-11-09 14:04:48
  */
 export default  {
+  /**
+   * 获取浏览器查询字符串参数
+   */
+  getQueryData: function () {
+    var url = window.location.href;
+    var index = url.indexOf("?");
+    var data = url.substring(index + 1);
+    index = data.indexOf("?")
+    data = data.substring(index + 1);
+    var queryData = new Object();
+    var strs = data.split("&");
+    for (var i = 0; i < strs.length; i++) {
+      queryData[strs[i].split("=")[0]] = strs[i].split("=")[1];
+    }
+    return queryData;
+  },
   /**
    * @name 获得cookie
    * @param {name} 参数名称
