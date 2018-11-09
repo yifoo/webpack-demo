@@ -1,4 +1,4 @@
-## Webpack +jQuery 单页面Demo [思维导图](https://www.haohome.top/file/webpack.html)
+## Webpack +jQuery 单页面Demo 
 
 预览链接:[点击访问](https://www.haohome.top/webpack-spa/)
 
