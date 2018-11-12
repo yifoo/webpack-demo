@@ -1,7 +1,9 @@
-<h2>详情页:)</h2>
-<br>
-<a href="#/news/detail/more">查看更多</a>
-<button class='btn add'>追加参数</button>
-<hr>
-<br>
-<div id="more"></div>
+<div class="detail">
+  <h2>详情页:)</h2>
+  <br>
+  <a class='btn' href="#/news/detail/more">查看更多</a>
+  <button class='btn add'>追加参数</button>
+  <hr>
+  <br>
+  <div id="more"></div>
+</div>

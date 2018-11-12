@@ -1,7 +1,7 @@
-<div>
+<div class='news'>
   <h1>消息页</h1>
   <br>
-  <a href="#/news/detail">打开详情</a>
+  <a class='btn' href="#/news/detail">打开详情</a>
   <hr>
   <br>
   <div id="detail">

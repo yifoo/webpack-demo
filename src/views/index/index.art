@@ -1,6 +1,6 @@
 <div>
   <h1>首页</h1>
   <br>
-  <button id='btn1'>点击1触发</button>
-  <button id='btn2'>点击2触发</button>
+  <button id='btn1' class='btn'>点击1触发</button>
+  <button id='btn2' class='btn'>点击2触发</button>
 </div>
