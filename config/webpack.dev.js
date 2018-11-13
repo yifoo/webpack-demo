@@ -3,7 +3,7 @@
  * @Date: 2018-06-08 11:27:52 
  * @Desc: 开发环境
  * @Last Modified by: wuhao
- * @Last Modified time: 2018-11-09 14:46:32
+ * @Last Modified time: 2018-11-12 16:26:10
  */
 process.env.NODE_ENV = 'dev'; // webpack配置内部环境,要注意位置 
 const path = require('path');
@@ -24,7 +24,7 @@ module.exports = merge(common, {
     quiet: true,
     hot: true, //热启动
     hotOnly:false,
-    // contentBase:path.resolve(__dirname, "../dist"),  //服务器的位置
+    contentBase:path.resolve(__dirname, "../dist"),  //服务器的位置
     publicPath: config.dev.assetsPublicPath,  // 绝对路径
     watchOptions: {
       poll: false,

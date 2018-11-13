@@ -3,7 +3,7 @@
  * @Date: 2018-06-08 11:28:16 
  * @Desc: 生产环境
  * @Last Modified by: wuhao
- * @Last Modified time: 2018-11-09 15:07:22
+ * @Last Modified time: 2018-11-12 16:23:45
  */
 process.env.NODE_ENV = 'prod'; // webpack配置内部环境,要注意位置 
 
@@ -53,10 +53,11 @@ module.exports = merge(common, {
     // }),
     /*清理文件夹*/
     new CleanWebpackPlugin(
-      ['*'],
+      ['dist'],
       {
-        root: path.resolve(__dirname,'../dist'),
-        verbose:  true,        　　　　　　　　　　//开启在控制台输出信息
+        root: path.resolve(__dirname,'../'),
+        verbose:  true,
+        exclude:'favicon.ico'        　　　　　　　　　　//开启在控制台输出信息
       }),
     /*单独使用link标签加载css并设置路径，相对于output配置中的publickPath*/
     new ExtractTextPlugin({

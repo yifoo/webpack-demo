@@ -34,8 +34,6 @@ let agent = new Proxy(star, {
 export default class ProxyMode {
   constructor($el) {
     this.$el = $el
-  }
-  init() {
     this.render()
     console.log(agent.name,agent.age,agent.phone,agent.price)
 

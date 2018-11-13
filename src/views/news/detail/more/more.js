@@ -1,8 +1,6 @@
 export default class More {
   constructor($el) {
     this.$el = $('#more')
-  }
-  init() {
     this.render()
   }
   render() {

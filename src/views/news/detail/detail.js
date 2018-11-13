@@ -1,12 +1,10 @@
 export default class Detail {
   constructor($el) {
     this.$el = $('#detail')
+    this.render()
     this.events = {
       "click   .add": 'addQuery'
     }
-  }
-  init() {
-    this.render()
   }
   render() {
     var detailTmpl = require('./detail.art')

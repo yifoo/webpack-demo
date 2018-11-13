@@ -1,13 +1,11 @@
 export default class Index{
   constructor($el){
     this.$el = $el
+    this.render()
     this.events = {
       'click  #btn1': 'trigger1',
       'click  #btn2': 'trigger2'
     }
-  }
-  init(){
-    this.render()
   }
   render(){
     var indexTmpl = require('./index.art')

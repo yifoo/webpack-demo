@@ -9,6 +9,9 @@ export default class Router {
       '/news/detail/more': 'views/news/detail/more/more.js',
       '/subscribe': 'views/subscribe/subscribe.js',
       '/proxy': 'views/proxy/proxy.js',
+      '/store': 'views/store/storeManage.js',
+      '/store/sub': 'views/store/components/subManage.js',
+      '/error':  'views/error/error.js'
     }
   }
   init() {
@@ -36,6 +39,11 @@ export default class Router {
     list.forEach((item, index) => {
       this.url += "/" + item
       this.name = this.routes[this.url]
+      // 404页面处理
+      if(!this.name){
+        location.href = '#/error'
+        return false
+      }
       this.controller(this.name)
     });
   }
@@ -47,8 +55,6 @@ export default class Router {
     var Component = require('../' + name).default;
     // 判断是否已经配置挂载元素,默认为$('#main')
     var controller = new Component($('#main'))
-    // 初始化组件内容
-    controller.init()
     this.bindEvents.call(controller)
   }
   /**

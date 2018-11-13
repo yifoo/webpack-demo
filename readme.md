@@ -12,25 +12,38 @@ Demo结构:
 │   ├── webpack.dev.js
 │   ├── webpack.prod.js
 │   └── webpack.test.js
-├── dist
-│   ├── index.html
-│   └── static
+├── favicon.ico
 ├── package-lock.json
 ├── package.json
 ├── postcss.config.js
 ├── readme.md
 ├── src
 │   ├── assets
+│   │   ├── css
+│   │   └── img
 │   ├── common
+│   │   └── utils.js
 │   ├── index.html
 │   ├── main.js
 │   ├── route
+│   │   └── router.js
 │   └── views
-├── static
-│   ├── favicon.ico
-│   └── lib
-└── tree.md
+│       ├── error
+│       ├── index
+│       ├── news
+│       ├── proxy
+│       ├── store
+│       └── subscribe
+└── static
+    ├── favicon.ico
+    └── lib
+        └── jquery-3.2.1.js
 ```
+
+### 2018-11-13 更新日志
+
+1. 添加状态管理demo,目前有一个bug: 路由切换会不断向事件中push新的监听事件,后续再优化解决
+2. 添加404页面处理
 
 ### 2018-11-12 更新日志
 

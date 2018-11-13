@@ -6,23 +6,32 @@
 │   ├── webpack.dev.js
 │   ├── webpack.prod.js
 │   └── webpack.test.js
-├── dist
-│   ├── index.html
-│   └── static
+├── favicon.ico
 ├── package-lock.json
 ├── package.json
 ├── postcss.config.js
 ├── readme.md
 ├── src
 │   ├── assets
+│   │   ├── css
+│   │   └── img
 │   ├── common
+│   │   └── utils.js
 │   ├── index.html
 │   ├── main.js
 │   ├── route
+│   │   └── router.js
 │   └── views
+│       ├── error
+│       ├── index
+│       ├── news
+│       ├── proxy
+│       ├── store
+│       └── subscribe
 ├── static
 │   ├── favicon.ico
 │   └── lib
+│       └── jquery-3.2.1.js
 └── tree.md
 
-10 directories, 15 files
+16 directories, 18 files

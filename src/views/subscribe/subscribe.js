@@ -33,12 +33,9 @@ class Observer {
   }
 }
 
-
 export default class Subscribe {
   constructor($el) {
     this.$el = $el
-  }
-  init() {
     this.render()
     // 测试代码
     let s = new Subject()
