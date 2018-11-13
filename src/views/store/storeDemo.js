@@ -14,7 +14,6 @@ export default class StoreManage extends Component {
   }
   render() {
     var storeTmpl = require('./storeDemo.art')
-    console.log('订阅事件长度',store.events)
     this.$el.html(storeTmpl())
   }
   update() {

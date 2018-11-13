@@ -10,7 +10,6 @@ export default class Detail extends Component{
   }
   render() {
     var subStoreTmpl = require('./subStore.art')
-    console.log('订阅事件长度',store.events)
     this.$el.html(subStoreTmpl())
   }
   update(){

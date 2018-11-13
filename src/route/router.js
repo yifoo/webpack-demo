@@ -24,7 +24,10 @@ export default class Router {
    */
   refresh(e) {
     if (e.newURL) {
-      console.log('路由', e.newURL.split('#')[1], e.oldURL.split('#')[1])
+      console.table({
+        newURL:e.newURL.split('#')[1],
+        oldURL:e.oldURL.split('#')[1]
+      })
       // var newURL = e.newURL.split('#')[1].split('?')[0]
       // var oldURL = e.oldURL.split('#')[1].split('?')[0]
       // if(newURL===oldURL){
