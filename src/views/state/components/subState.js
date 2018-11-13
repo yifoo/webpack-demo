@@ -9,8 +9,8 @@ export default class Detail extends Component{
     this.render()
   }
   render() {
-    var subStoreTmpl = require('./subStore.art')
-    this.$el.html(subStoreTmpl())
+    var subStateTmpl = require('./subState.art')
+    this.$el.html(subStateTmpl())
   }
   update(){
     console.log('详情更新',store.state.count)

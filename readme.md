@@ -30,20 +30,21 @@ Demo结构:
 │   └── views
 │       ├── error
 │       ├── index
-│       ├── news
 │       ├── proxy
-│       ├── store
-│       └── subscribe
+│       ├── state
+│       ├── subscribe
+│       └── visualDom
 └── static
-    ├── favicon.ico
-    └── lib
-        └── jquery-3.2.1.js
+   ├── favicon.ico
+   └── lib
+       └── jquery-3.2.1.js
 ```
 
 ### 2018-11-13 更新日志
 
-1. 添加状态管理demo,目前有一个bug: 路由切换会不断向事件中push新的监听事件,后续再优化解决
-2. 添加404页面处理
+1. 添加状态管理demo,目前有一个**bug**: 路由切换会不断向事件中push新的监听事件,后续再优化解决
+2. 添加404页面处理,侧边导航栏的高亮
+3. 添加了解虚拟DOM的Demo
 
 ### 2018-11-12 更新日志
 

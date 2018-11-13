@@ -13,8 +13,8 @@ export default class StoreManage extends Component {
     }
   }
   render() {
-    var storeTmpl = require('./storeDemo.art')
-    this.$el.html(storeTmpl())
+    var stateTmpl = require('./stateDemo.art')
+    this.$el.html(stateTmpl())
   }
   update() {
     console.log('store组件更新了')

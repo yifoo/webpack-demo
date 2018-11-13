@@ -1,0 +1,9 @@
+<div class="dom">
+  <h1>虚拟DOM</h1>
+  <div class="mount"></div>
+</div>
+<style scoped>
+  .mount{
+    padding:1rem 0;
+  }
+</style>

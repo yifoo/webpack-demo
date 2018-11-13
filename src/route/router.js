@@ -3,16 +3,18 @@ export default class Router {
   constructor() {
     // 路由配置
     this.routes = {
-      '/index': 'views/index/index.js',
-      '/news': 'views/news/news.js',
-      '/news/detail': 'views/news/detail/detail.js',
-      '/news/detail/more': 'views/news/detail/more/more.js',
-      '/subscribe': 'views/subscribe/subscribe.js',
-      '/proxy': 'views/proxy/proxy.js',
-      '/store': 'views/store/storeDemo.js',
-      '/store/sub': 'views/store/components/subStore.js',
-      '/error':  'views/error/error.js'
+      '/index': 'views/index/index',
+      '/index/detail': 'views/index/detail/detail',
+      '/index/detail/more': 'views/index/detail/more/more',
+      '/subscribe': 'views/subscribe/subscribe',
+      '/proxy': 'views/proxy/proxy',
+      '/state': 'views/state/stateDemo',
+      '/state/sub': 'views/state/components/subState',
+      '/dom': 'views/visualDom/visualDom',
+      '/error': 'views/error/error'
     }
+    // 导航菜单列表
+    this.navList = $('.tab .nav-item')
   }
   init() {
     window.addEventListener('load', this.refresh.bind(this), false);
@@ -25,8 +27,8 @@ export default class Router {
   refresh(e) {
     if (e.newURL) {
       console.table({
-        newURL:e.newURL.split('#')[1],
-        oldURL:e.oldURL.split('#')[1]
+        newURL: e.newURL.split('#')[1],
+        oldURL: e.oldURL.split('#')[1]
       })
       // var newURL = e.newURL.split('#')[1].split('?')[0]
       // var oldURL = e.oldURL.split('#')[1].split('?')[0]
@@ -40,10 +42,14 @@ export default class Router {
     this.url = ""
     this.controller[list[list.length - 1]]
     list.forEach((item, index) => {
+      // 导航菜单激活显示
+      if (index === 0) {
+        this.navActive(item)
+      }
       this.url += "/" + item
       this.name = this.routes[this.url]
       // 404页面处理
-      if(!this.name){
+      if (!this.name) {
         location.href = '#/error'
         return false
       }
@@ -90,5 +96,17 @@ export default class Router {
       obj = null; // 用完即释放空间
     }
     Event = null
+  }
+  /**
+   * 导航激活显示
+   * @param  item 当前router对象
+   */
+  navActive(item) {
+    for (var i = 0; i < this.navList.length; i++) {
+      $(this.navList[i]).removeClass('active')
+      if ($(this.navList[i]).attr('href').slice(2) === item) {
+        $(this.navList[i]).addClass('active')
+      }
+    }
   }
 }

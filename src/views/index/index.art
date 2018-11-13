@@ -3,4 +3,11 @@
   <br>
   <button id='btn1' class='btn'>点击1触发</button>
   <button id='btn2' class='btn'>点击2触发</button>
+  <hr>
+  <br>
+  <a class='btn' href="#/index/detail">打开详情</a>
+  <hr>
+  <br>
+  <div id="detail">
+  </div>
 </div>

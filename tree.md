@@ -24,14 +24,14 @@
 │   └── views
 │       ├── error
 │       ├── index
-│       ├── news
 │       ├── proxy
-│       ├── store
-│       └── subscribe
-├── static
-│   ├── favicon.ico
-│   └── lib
-│       └── jquery-3.2.1.js
-└── tree.md
+│       ├── state
+│       ├── subscribe
+│       └── visualDom
+└── static
+   ├── favicon.ico
+   └── lib
+       └── jquery-3.2.1.js
+
 
 16 directories, 18 files

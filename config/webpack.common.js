@@ -3,7 +3,7 @@
  * @Date: 2018-06-22 13:57:02 
  * @Desc: webpack基础配置
  * @Last Modified by: wuhao
- * @Last Modified time: 2018-11-09 15:01:49
+ * @Last Modified time: 2018-11-13 15:43:00
  */
 // require("babel-polyfill");
 const path = require('path');
@@ -56,7 +56,8 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 2000,
-          name: utils.assetsPath('img/[name].bundle.[ext]'),
+          // useRelativePath: true,
+          name: utils.assetsPath('img/[name].bundle.[ext]')
         }
       },
       {

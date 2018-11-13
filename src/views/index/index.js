@@ -1,3 +1,10 @@
+/*
+ * @Author: wuhao 
+ * @Date: 2018-11-13 13:56:42 
+ * @Desc: 主要展示组件内事件绑定逻辑
+ * @Last Modified by: wuhao
+ * @Last Modified time: 2018-11-13 14:02:35
+ */
 export default class Index{
   constructor($el){
     this.$el = $el
