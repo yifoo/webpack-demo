@@ -9,9 +9,9 @@ export default class Detail extends Component{
     this.render()
   }
   render() {
-    var subManageTmpl = require('./subManage.art')
+    var subStoreTmpl = require('./subStore.art')
     console.log('订阅事件长度',store.events)
-    this.$el.html(subManageTmpl())
+    this.$el.html(subStoreTmpl())
   }
   update(){
     console.log('详情更新',store.state.count)

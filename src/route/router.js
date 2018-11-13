@@ -9,8 +9,8 @@ export default class Router {
       '/news/detail/more': 'views/news/detail/more/more.js',
       '/subscribe': 'views/subscribe/subscribe.js',
       '/proxy': 'views/proxy/proxy.js',
-      '/store': 'views/store/storeManage.js',
-      '/store/sub': 'views/store/components/subManage.js',
+      '/store': 'views/store/storeDemo.js',
+      '/store/sub': 'views/store/components/subStore.js',
       '/error':  'views/error/error.js'
     }
   }

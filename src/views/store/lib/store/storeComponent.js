@@ -3,7 +3,7 @@
  * @Date: 2018-11-13 10:30:50 
  * @Desc: 状态管理组件
  * @Last Modified by: wuhao
- * @Last Modified time: 2018-11-13 10:47:06
+ * @Last Modified time: 2018-11-13 11:11:17
  */
 import PubSubscribe from './pubSubscribe'
 
@@ -46,7 +46,7 @@ export default class Store {
     return true;
   }
   /**
-   * 异步修改状态属性值的方法
+   * 分发执行mutations的方法
    * @param  key 的方法属性名 
    * @param  newVal 状态的新值 
    */
