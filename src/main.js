@@ -3,7 +3,7 @@
  * @Date: 2018-07-06 10:53:01 
  * @Desc: webpack打包入口
  * @Last Modified by: wuhao
- * @Last Modified time: 2018-11-09 14:57:43
+ * @Last Modified time: 2018-11-17 22:50:15
  */
 import "babel-polyfill";
 import '@/assets/css/normalize.css';
@@ -18,7 +18,9 @@ window.utils = utils;
 window.jQuery = $;
 window.jquery = $;
 window.$ = $;
-var router = new Router()
+var router = new Router({
+  mode:'history'
+})
 router.init()
 // 可根据环境配置变量,如接口api
 if(process.env.NODE_ENV === 'dev') {

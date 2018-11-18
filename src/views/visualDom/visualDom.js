@@ -3,7 +3,7 @@
  * @Date: 2018-11-13 15:52:42 
  * @Desc: 了解虚拟DOM
  * @Last Modified by: wuhao
- * @Last Modified time: 2018-11-14 12:54:29
+ * @Last Modified time: 2018-11-17 13:32:53
  */
 /**
  * 获取节点对象
@@ -30,7 +30,7 @@ class vNode {
     return el
   }
 }
-
+console.log(vNode.prototype,vNode.prototype.__proto__ ===Object.prototype)
 export default class VisualDom {
   constructor($el) {
     this.$el = $el
@@ -43,14 +43,34 @@ export default class VisualDom {
   }
   visualRender() {
     var element = {
-      tagName: 'ul', // 节点标签名
-      props: { // DOM的属性，用一个对象存储键值对
-        id: 'list'
-      },
-      children: [ // 该节点的子节点
-        {tagName: 'li', props: {class: 'item'}, children: ["Item 1"]},
-        {tagName: 'li', props: {class: 'item'}, children: ["Item 2"]},
-        {tagName: 'li', props: {class: 'item'}, children: ["Item 3"]},
+      tagName:'div',
+      children:[
+        {
+          tagName:'img',
+          props:{
+            style:'width:60%;margin:1rem 0',
+            src:"https://haohome.top/18-3-11/88286547.jpg"
+          }
+        },
+        {
+          tagName: 'ul', // 节点标签名
+          props: { // DOM的属性，用一个对象存储键值对
+            id: 'list'
+          },
+          children: [ // 该节点的子节点
+            {tagName: 'li', props: {class: 'item'}, children: ["构造函数具有prototype 属性，指向原型对象"]},
+            {tagName: 'li', props: {class: 'item'}, children: ["原型对象具有constructor 属性，指向构造函数"]},
+            {tagName: 'li', props: {class: 'item'}, children: ["实例对象具有__protot__ 属性，指向原型对象,继承原型对象的方法"]},
+          ]
+        },
+        {
+          tagName:'p',
+          props:{style:'color:red'},
+          children:[
+            {tagName:'p',children:["Student===Student.prototype.constructor"]},
+            {tagName:'p',children:["lilei.__proto__===Student.prototype"]}
+          ]
+        }
       ]
     }
     let node = new vNode(element).render()
