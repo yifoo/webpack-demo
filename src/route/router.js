@@ -1,7 +1,7 @@
 export default class Router {
   constructor(obj) {
     this.mode = obj.mode
-    this.mode = 'hash'
+    // this.mode = 'history'
     // 路由配置
     this.routes = {
       '/index': 'views/index/index',
@@ -16,6 +16,7 @@ export default class Router {
     }
     // 导航菜单列表
     this.navList = $('.tab .nav-item')
+    this.init()
   }
   init() {
     if (this.mode === 'hash') {
@@ -50,7 +51,7 @@ export default class Router {
         path: path
       }, null, path)
       // 加载相应页面
-      this.loadView(path)
+      this.loadView(path.split('?')[0])
     }
   }
   /**
@@ -75,8 +76,9 @@ export default class Router {
    * @param  e  当前对象Event
    */
   historyRefresh(e) {
+    console.log(e,'变化')
     const state = e.state || {}
-    const path = state.path || null
+    const path = state.path.split('?')[0] || null
     if (path) {
       this.loadView(path)
     }
@@ -106,7 +108,7 @@ export default class Router {
         this.errorPage()
         return false
       }
-      // 对于子级页面的处理
+      // 对于嵌套路由的处理
       if (this.oldURL && this.oldURL[0]==this.currentURLlist[0]) {
         this.handleSubRouter(item,index)
       } else {
@@ -117,17 +119,19 @@ export default class Router {
     this.oldURL = JSON.parse(JSON.stringify(this.currentURLlist))
   }
   /**
-   * 处理子级组件
+   * 处理嵌套路由
    * @param {string} item 链接list中当前项
    * @param {number} index 链接list中当前索引
    */
   handleSubRouter(item,index){
+    // 新路由是旧路由的子级
     if (this.oldURL.length < this.currentURLlist.length) {
       // 相同路由部分不重新加载
       if (item !== this.oldURL[index]) {
         this.controller(this.name)
       }
     }
+    // 新路由是旧路由的父级
     if (this.oldURL.length > this.currentURLlist.length) {
       var len = Math.min(this.oldURL.length, this.currentURLlist.length)
       // 只重新加载最后一个路由
@@ -152,7 +156,6 @@ export default class Router {
    * @param {string} name 
    */
   controller(name) {
-    console.log('name', name)
     var Component = require('../' + name).default;
     // 判断是否已经配置挂载元素,默认为$('#main')
     var controller = new Component($('#main'))
@@ -160,6 +163,19 @@ export default class Router {
     // history模式下 每次组件切换都绑定所有的链接进行处理
     if (this.mode === 'history') {
       $("#main").find('a[href]').unbind('click').on('click', this.handleLink.bind(this))
+    }
+  }
+  /**
+   * 手动跳转路由
+   * @param {string} path 
+   */
+  push(path){
+    if(this.mode === 'hash'){
+      location.hash = '#'+path
+    }else{
+      history.pushState({path: path}, null, path)
+      // 加载相应页面
+      this.loadView(path.split('?')[0])
     }
   }
   /**
