@@ -1,0 +1,7 @@
+<div class="proxy">
+  <h1>双向数据绑定MVVM</h1>
+  <br>
+  <input type="text" id='input'>
+  <p class="show"></p>
+  <p>请打开Chrome 控制台</p>
+</div>

@@ -3,7 +3,7 @@
  * @Date: 2018-06-08 11:28:16 
  * @Desc: 生产环境
  * @Last Modified by: wuhao
- * @Last Modified time: 2018-11-12 16:23:45
+ * @Last Modified time: 2018-11-20 10:49:08
  */
 process.env.NODE_ENV = 'prod'; // webpack配置内部环境,要注意位置 
 
@@ -21,8 +21,8 @@ module.exports = merge(common, {
   devtool: 'source-map',	//调试源码(debug)和运行基准测试(benchmark tests)很有用
   output: {
     path: config.build.assetsRoot,      //path.resolve(__dirname, '../dist')
-    filename: utils.assetsPath('js/[name].bundle.js'),
-    chunkFilename: utils.assetsPath('js/[id].bundle.js'),
+    filename: utils.assetsPath('js/[name].[chunkhash].js'),
+    chunkFilename: utils.assetsPath('js/lazy/[id].[chunkhash].js'),
     publicPath: './'
   },
   module:{

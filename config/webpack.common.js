@@ -3,7 +3,7 @@
  * @Date: 2018-06-22 13:57:02 
  * @Desc: webpack基础配置
  * @Last Modified by: wuhao
- * @Last Modified time: 2018-11-13 15:43:00
+ * @Last Modified time: 2018-11-20 10:15:33
  */
 // require("babel-polyfill");
 const path = require('path');
@@ -24,8 +24,8 @@ module.exports = {
   },
   output: { // 输出目录
     path: config.build.assetsRoot,
-    filename: '[name].[hash].js',
-    // publicPath:"/",
+    filename: utils.assetsPath('[name].[chunkhash].js'),
+    chunkFilename: utils.assetsPath('js/lazy/[name].[chunkhash].js'),
     publicPath: process.env.NODE_ENV === 'test'
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath
@@ -70,7 +70,7 @@ module.exports = {
     /**提取公共模块代码,减小打包体积 */
     new webpack.optimize.CommonsChunkPlugin({
       name: 'common',
-      filename: utils.assetsPath('js/common.js'),
+      filename: utils.assetsPath('js/common.[hash].js'),
     }),
     /**指定模板输出 */
     new HtmlWebpackPlugin({

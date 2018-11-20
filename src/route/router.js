@@ -12,6 +12,7 @@ export default class Router {
       '/state': 'views/state/stateDemo',
       '/state/sub': 'views/state/components/subState',
       '/dom': 'views/visualDom/visualDom',
+      '/mvvm': 'views/mvvm/mvvm',
       '/error': 'views/error/error'
     }
     // 导航菜单列表
@@ -156,14 +157,19 @@ export default class Router {
    * @param {string} name 
    */
   controller(name) {
-    var Component = require('../' + name).default;
-    // 判断是否已经配置挂载元素,默认为$('#main')
-    var controller = new Component($('#main'))
-    this.bindEvents.call(controller)
-    // history模式下 每次组件切换都绑定所有的链接进行处理
-    if (this.mode === 'history') {
-      $("#main").find('a[href]').unbind('click').on('click', this.handleLink.bind(this))
-    }
+    // var Component = require('../' + name).default;
+    // var controller = new Component($('#main'))
+    // this.bindEvents.call(controller)
+    // import 函数会返回一个 Promise对象
+    var Component = ()=>import('../'+name);
+    Component().then(resp=>{
+      var controller = new resp.default($('#main'))
+        this.bindEvents.call(controller)
+        // history模式下 每次组件切换都绑定所有的链接进行处理
+        if (this.mode === 'history') {
+          $("#main").find('a[href]').unbind('click').on('click', this.handleLink.bind(this))
+        }
+    })
   }
   /**
    * 手动跳转路由
