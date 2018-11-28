@@ -1,0 +1,288 @@
+<section class="layout float">
+  <style media="screen">
+  .layout.float .left{
+    float:left;
+    width:300px;
+    background: lightskyblue;
+  }
+  .layout.float .center{
+    background: darkkhaki;
+  }
+  .layout.float .right{
+    float:right;
+    width:300px;
+    background: sandybrown;
+  }
+  </style>
+    <h2>浮动解决方案</h2>
+  <article class="left-right-center">
+    <div class="left">
+    </div>
+    <div class="right"></div>
+    <div class="center">
+      .layout.float .left{
+        float:left;
+        width:300px;
+        background: lightskyblue;
+      }
+      <br>
+      .layout.float .center{
+        background: darkkhaki;
+      }
+      <br>
+      .layout.float .right{
+        float:right;
+        width:300px;
+        background: sandybrown;
+      }
+      <br>
+      1.这是三栏布局的浮动解决方案；
+      2.这是三栏布局的浮动解决方案；
+      3.这是三栏布局的浮动解决方案；
+      4.这是三栏布局的浮动解决方案；
+      5.这是三栏布局的浮动解决方案；
+    </div>
+  </article>
+</section>
+
+<!-- 绝对布局 -->
+<section class="layout absolute">
+  <style>
+    .layout.absolute .left-center-right>div{
+      position: absolute;
+    }
+    .layout.absolute .left{
+      left:0;
+      width: 300px;
+      background: lightskyblue;
+    }
+    .layout.absolute .center{
+      left: 300px;
+      right: 300px;
+      background: darkkhaki;
+    }
+    .layout.absolute .right{
+      right:0;
+      width: 300px;
+      background: sandybrown;
+    }
+  </style>
+  <h2>绝对定位解决方案</h2>
+  <article class="left-center-right">
+    <div class="left">
+    </div>
+    <div class="center">
+      .layout.absolute .left-center-right>div{
+        position: absolute;
+      }
+      <br>
+      .layout.absolute .left{
+        left:0;
+        width: 300px;
+        background: lightskyblue;
+      }
+      <br>
+      .layout.absolute .center{
+        left: 300px;
+        right: 300px;
+        background: darkkhaki;
+      }
+      <br>
+      .layout.absolute .right{
+        right:0;
+        width: 300px;
+        background: sandybrown;
+      }
+      1.这是三栏布局的浮动解决方案；
+      2.这是三栏布局的浮动解决方案；
+      3.这是三栏布局的浮动解决方案；
+      4.这是三栏布局的浮动解决方案；
+      5.这是三栏布局的浮动解决方案；
+    </div>
+    <div class="right"></div>
+  </article>
+</section>
+
+
+<!-- flexbox布局 -->
+<section class="layout flexbox">
+  <style>
+    .layout.flexbox{
+      margin-top: 110px;
+    }
+    .layout.flexbox .left-center-right{
+      display: flex;
+    }
+    .layout.flexbox .left{
+      width: 300px;
+      background: lightskyblue;
+    }
+    .layout.flexbox .center{
+      flex:1;
+      background: darkkhaki;
+    }
+    .layout.flexbox .right{
+      width: 300px;
+      background: sandybrown;
+    }
+  </style>
+  <h2>flexbox解决方案</h2>
+  <article class="left-center-right">
+    <div class="left">
+    </div>
+    <div class="center">
+      .layout.flexbox{
+        margin-top: 110px;
+      }
+      <br>
+      .layout.flexbox .left-center-right{
+        display: flex;
+      }
+      <br>
+      .layout.flexbox .left{
+        width: 300px;
+        background: lightskyblue;
+      }
+      <br>
+      .layout.flexbox .center{
+        flex:1;
+        background: darkkhaki;
+      }
+      <br>
+      .layout.flexbox .right{
+        width: 300px;
+        background: sandybrown;
+      }
+      <br>
+      1.这是三栏布局的浮动解决方案；
+      2.这是三栏布局的浮动解决方案；
+      3.这是三栏布局的浮动解决方案；
+      4.这是三栏布局的浮动解决方案；
+      5.这是三栏布局的浮动解决方案；
+    </div>
+    <div class="right"></div>
+  </article>
+</section>
+
+
+<!-- 表格布局 -->
+<section class="layout table">
+  <style>
+    .layout.table .left-center-right{
+      width:100%;
+      height: 100px;
+      display: table;
+    }
+    .layout.table .left-center-right>div{
+      display: table-cell;
+    }
+    .layout.table .left{
+      width: 300px;
+      background: lightskyblue;
+    }
+    .layout.table .center{
+      background: darkkhaki;
+    }
+    .layout.table .right{
+      width: 300px;
+      background: sandybrown;
+    }
+  </style>
+  <h2>表格布局解决方案</h2>
+  <article class="left-center-right">
+    <div class="left">
+    </div>
+    <div class="center">
+      .layout.table .left-center-right{
+        width:100%;
+        height: 100px;
+        display: table;
+      }
+      <br>
+      .layout.table .left-center-right>div{
+        display: table-cell;
+      }
+      <br>
+      .layout.table .left{
+        width: 300px;
+        background: lightskyblue;
+      }
+      <br>
+      .layout.table .center{
+        background: darkkhaki;
+      }
+      <br>
+      .layout.table .right{
+        width: 300px;
+        background: sandybrown;
+      }
+      1.这是三栏布局的浮动解决方案；
+      2.这是三栏布局的浮动解决方案；
+      3.这是三栏布局的浮动解决方案；
+      4.这是三栏布局的浮动解决方案；
+      5.这是三栏布局的浮动解决方案；
+    </div>
+    <div class="right"></div>
+  </article>
+</section>
+
+<!-- 网格布局 -->
+<section class="layout grid">
+  <style>
+    .layout.grid .left-center-right{
+      width:100%;
+      display: grid;
+      /*grid-template-rows: 100px;*/
+      grid-template-columns: 300px auto 300px;
+    }
+    .layout.grid .left{
+      background: lightskyblue;
+    }
+    .layout.grid .center{
+      background: darkkhaki;
+    }
+    .layout.grid .right{
+      background: sandybrown;
+    }
+  </style>
+  <h2>网格布局解决方案</h2>
+  <article class="left-center-right">
+    <div class="left">
+    </div>
+    <div class="center">
+      .layout.grid .left-center-right{
+        width:100%;
+        display: grid;
+        grid-template-columns: 300px auto 300px;
+      }
+      <br>
+      .layout.grid .left{
+        background: lightskyblue;
+      }
+      <br>
+      .layout.grid .center{
+        background: darkkhaki;
+      }
+      <br>
+      .layout.grid .right{
+        background: sandybrown;
+      }
+      <br>
+      1.这是三栏布局的浮动解决方案；
+      2.这是三栏布局的浮动解决方案；
+      3.这是三栏布局的浮动解决方案；
+      4.这是三栏布局的浮动解决方案；
+      5.这是三栏布局的浮动解决方案；
+    </div>
+    <div class="right"></div>
+  </article>
+</section>
+
+<style>
+  .layout{
+    position: relative;
+  }
+  .layout article div{
+    min-height: 100px;
+  }
+</style>

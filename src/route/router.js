@@ -7,12 +7,18 @@ export default class Router {
       '/index': 'views/index/index',
       '/index/detail': 'views/index/detail/detail',
       '/index/detail/more': 'views/index/detail/more/more',
-      '/subscribe': 'views/subscribe/subscribe',
-      '/proxy': 'views/proxy/proxy',
+      '/design': 'views/design',
+      '/design/subscribe': 'views/design/subscribe/index',
+      '/design/proxy': 'views/design/proxy/index',
       '/state': 'views/state/stateDemo',
       '/state/sub': 'views/state/components/subState',
       '/dom': 'views/visualDom/visualDom',
       '/mvvm': 'views/mvvm/mvvm',
+      '/algorithm': 'views/algorithm',
+      '/algorithm/bubbleSort': 'views/algorithm/bubbleSort',
+      '/layout': 'views/layout',
+      '/layout/three': 'views/layout/three/ThreeAdapt',
+      '/layout/vetically': 'views/layout/vetically/Vetically',
       '/error': 'views/error/error'
     }
     // 导航菜单列表
@@ -77,7 +83,6 @@ export default class Router {
    * @param  e  当前对象Event
    */
   historyRefresh(e) {
-    console.log(e,'变化')
     const state = e.state || {}
     const path = state.path.split('?')[0] || null
     if (path) {
@@ -89,7 +94,6 @@ export default class Router {
    * @param {string} currentURL 
    */
   loadView(currentURL) {
-    console.log('currentURL', currentURL)
     if (this.mode === 'history' && currentURL === '/') {
       history.replaceState({path: '/'}, null, '/')
       currentURL = '/index'
@@ -110,7 +114,7 @@ export default class Router {
         return false
       }
       // 对于嵌套路由的处理
-      if (this.oldURL && this.oldURL[0]==this.currentURLlist[0]) {
+      if (this.oldURL && this.oldURL[index]==this.currentURLlist[index]) {
         this.handleSubRouter(item,index)
       } else {
         this.controller(this.name)
@@ -157,6 +161,7 @@ export default class Router {
    * @param {string} name 
    */
   controller(name) {
+    console.log('加载页面', this.url)
     // var Component = require('../' + name).default;
     // var controller = new Component($('#main'))
     // this.bindEvents.call(controller)

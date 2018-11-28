@@ -1,4 +1,11 @@
-export default class pubSubscribe{
+/*
+ * @Author: wuhao 
+ * @Date: 2018-11-27 23:21:32 
+ * @Desc: 订阅主题模块
+ * @Last Modified by: wuhao
+ * @Last Modified time: 2018-11-27 23:21:59
+ */
+export default class Subject{
   constructor(){
     this.events = {}
   }

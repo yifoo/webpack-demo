@@ -4,4 +4,5 @@
   <input type="text" id='input'>
   <p class="show"></p>
   <p>请打开Chrome 控制台</p>
+  <p id='prev'>数据:</p>
 </div>

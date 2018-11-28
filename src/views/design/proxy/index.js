@@ -13,7 +13,6 @@ let agent = new Proxy(star, {
       return '18611112222'
     }
     if (key === 'price') {
-      // 明星不报价，经纪人报价
       return 120000
     }
     return target[key]
@@ -33,11 +32,11 @@ let agent = new Proxy(star, {
 
 export default class ProxyMode {
   constructor($el) {
-    this.$el = $el
+    this.$el = $el.find("#section")
     this.render()
     console.log(agent.name,agent.age,agent.phone,agent.price)
 
-    // 想自己提供报价（砍价，或者高价争抢）
+    // 自己提供报价（砍价，或者高价争抢）
     agent.customPrice = 150000
     // agent.customPrice = 90000  // 报错：价格太低
     console.log('customPrice', agent.customPrice)

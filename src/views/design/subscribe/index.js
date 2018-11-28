@@ -35,7 +35,8 @@ class Observer {
 
 export default class Subscribe {
   constructor($el) {
-    this.$el = $el
+    this.$el = $el.find("#section")
+    console.log(123123123123)
     this.render()
     // 测试代码
     let s = new Subject()

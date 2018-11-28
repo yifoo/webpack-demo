@@ -1,7 +1,7 @@
 <div class="store">
   <h1>状态管理</h1>
   <br>
-  <p>请打开Chrome 控制台</p>
+  <h2 id='count' style='color:red'><%=count%></h2>
   <a href="#/state/sub" class="btn">加载子页面</a>
   <button id='add1' class="btn">mutation加1</button>
   <button id='add2' class="btn">dispath加2</button>

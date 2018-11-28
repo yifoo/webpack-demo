@@ -33,7 +33,8 @@ input[type="button"]:disabled,button:disabled{
   left: 0;
   width: 100%;
   height: 50px;
-  background-color: rgba(0, 150, 136,.9);
+  z-index: 100;
+  background-color: rgba(0, 150, 136,1);
   .logo{
     margin-left: 1rem;
     width: 100px;
@@ -77,6 +78,37 @@ input[type="button"]:disabled,button:disabled{
 }
 .main{
   clear:both;
-  padding:2rem 1rem;
+  padding:1rem;
   box-sizing: border-box;
+}
+.tab{
+  height: 2rem;
+  width: 100%;
+  line-height: 2rem;
+  margin-top:1rem;
+  text-align: center;
+  font-size: 1rem;
+  .tab-link{
+    float: left;
+    a{
+      display: inline-block;
+      width:5rem;
+      height:100%;
+      color:#808080;
+      border-bottom:2px solid transparent;
+      box-sizing: border-box;
+      &:hover{
+        color:#000;
+        border-bottom:2px solid #009688;
+      }
+      &.active{
+        color:#000;
+        border-bottom:2px solid #009688;
+      }
+    }
+  }
+}
+.section{
+  clear: both;
+  padding: 1rem 0;
 }

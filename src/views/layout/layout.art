@@ -1,0 +1,10 @@
+<div>
+  <h1>布局 </h1>
+  <div class="tab">
+    <ul>
+      <li class='tab-link'><a href="#/layout/three">三栏布局</a></li>
+      <li class='tab-link'><a href="#/layout/vetically">垂直居中</a></li>
+    </ul>
+  </div>
+  <section id='section' class='section'></section>
+</div>

@@ -1,11 +1,11 @@
 /*
  * @Author: wuhao 
  * @Date: 2018-11-13 10:31:46 
- * @Desc: 状态管理
+ * @Desc: state实例
  * @Last Modified by: wuhao
- * @Last Modified time: 2018-11-13 10:44:35
+ * @Last Modified time: 2018-11-27 23:42:24
  */
-import StoreComponent from "./storeComponent";
+import Store from "./Store";
 
 let state = {
   count: 0
@@ -13,6 +13,11 @@ let state = {
 let mutations = {
   addCount(state,val){
     state.count = val
+    console.log('state.count:',state.count)
+  },
+  minusCount(state,val){
+    state.count = val
+    console.log('state.count:',state.count)
   }
 }
 let actions = {
@@ -20,7 +25,7 @@ let actions = {
     context.commit('addCount', val);
   }
 }
-export default new StoreComponent({
+export default new Store({
   state,
   mutations,
   actions

@@ -1,21 +1,24 @@
 /*
  * @Author: wuhao 
  * @Date: 2018-11-13 10:30:50 
- * @Desc: 状态管理组件
+ * @Desc: 状态管理
  * @Last Modified by: wuhao
- * @Last Modified time: 2018-11-13 11:11:17
+ * @Last Modified time: 2018-11-27 23:15:05
  */
-import PubSubscribe from './pubSubscribe'
-
+import Subject from './Subject'
 export default class Store {
   constructor(params) {
     var self = this
     this.mutations = params.mutations ? params.mutations : {}
     this.actions = params.actions? params.actions : {}
     this.status = 'resting'
-    this.events = new PubSubscribe()
+    this.events = new Subject()
+    this.components = []    // 用来记录相应组件
 
     this.state = new Proxy((params.state || {}), {
+      get(state,key){
+        return state[key]
+      },
       set(state, key, val) {
         state[key] = val;
         console.log(`状态变化: ${key}: ${val}`);
@@ -42,7 +45,6 @@ export default class Store {
     this.status = 'mutation';
     this.mutations[key](this.state, newVal);
     console.groupEnd();
-    // this.state = Object.assign(this.state, newState);
     return true;
   }
   /**

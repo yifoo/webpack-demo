@@ -1,4 +1,5 @@
 <div class="detail">
-  <h2>状态管理:)</h2>
+  <h2>子组件😁</h2>
   <br>
+  <button id='minus' class='btn'>mutations减1</button>
 </div>
