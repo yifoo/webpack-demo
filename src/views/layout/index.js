@@ -8,7 +8,6 @@ export default class Layout{
   }
   render(){
     var tmpl = require('./layout.art')
-    console.log(123123)
     this.$el.html(tmpl())
   }
   choose(e){
