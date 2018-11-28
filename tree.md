@@ -16,22 +16,26 @@
 │   │   ├── css
 │   │   └── img
 │   ├── common
+│   │   ├── lib
 │   │   └── utils.js
 │   ├── index.html
 │   ├── main.js
 │   ├── route
 │   │   └── router.js
 │   └── views
+│       ├── algorithm
+│       ├── demo.html
+│       ├── design
 │       ├── error
 │       ├── index
-│       ├── proxy
+│       ├── layout
+│       ├── mvvm
 │       ├── state
-│       ├── subscribe
 │       └── visualDom
-└── static
-   ├── favicon.ico
-   └── lib
-       └── jquery-3.2.1.js
+├── static
+│   ├── favicon.ico
+│   └── lib
+│       └── jquery-3.2.1.js
+└── tree.md
 
-
-16 directories, 18 files
+19 directories, 19 files

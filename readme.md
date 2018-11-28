@@ -12,33 +12,40 @@ Demo结构:
 │   ├── webpack.dev.js
 │   ├── webpack.prod.js
 │   └── webpack.test.js
-├── favicon.ico
-├── package-lock.json
-├── package.json
-├── postcss.config.js
-├── readme.md
 ├── src
 │   ├── assets
 │   │   ├── css
 │   │   └── img
 │   ├── common
+│   │   ├── lib
 │   │   └── utils.js
 │   ├── index.html
 │   ├── main.js
 │   ├── route
 │   │   └── router.js
 │   └── views
+│       ├── design
 │       ├── error
 │       ├── index
-│       ├── proxy
-│       ├── state
-│       ├── subscribe
-│       └── visualDom
-└── static
-   ├── favicon.ico
-   └── lib
-       └── jquery-3.2.1.js
+│       ├── layout
+│       ├── mvvm
+│       └── state
+├── favicon.ico
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── readme.md
+├── static
+│   ├── favicon.ico
+│   └── lib
+│       └── jquery-3.2.1.js
+└── tree.md
 ```
+
+### 2018-11-28 更新日志
+
+1. 修复兄弟路由加载逻辑,将状态管理作为一个lib,修复状态管理重复添加事件问题;
+2. 添加布局的案例,调整页面结构
 
 ### 2018-11-18 更新日志
 
@@ -46,7 +53,7 @@ Demo结构:
 
 ### 2018-11-13 更新日志
 
-1. 添加状态管理demo,目前有一个**bug**: 路由切换会不断向事件中push新的监听事件,后续再优化解决
+1. 添加状态管理demo,~~目前有一个**bug**: 路由切换会不断向事件中push新的监听事件,后续再优化解决~~
 2. 添加404页面处理,侧边导航栏的高亮
 3. 添加了解虚拟DOM的Demo
 
