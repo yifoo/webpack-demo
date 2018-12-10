@@ -1,11 +1,12 @@
 import StateChange from '@/common/lib/store/StateChange'
 import store from '@/common/lib/store/StoreComponent'
 export default class Detail extends StateChange{
-  constructor($el) {
+  constructor($root) {
     super({
       store,
     })
-    this.$el = $('#detail')
+    // 改变挂载点
+    this.$root = $('#detail')
     this.render()
     this.events={
       'click #minus': 'mutationMinus',
@@ -13,7 +14,9 @@ export default class Detail extends StateChange{
   }
   render() {
     var subStateTmpl = require('./subState.art')
-    this.$el.html(subStateTmpl())
+    this.$root.html(subStateTmpl({
+      count: store.state.count
+    }))
   }
   mutationMinus(){
     var count = store.state.count;
@@ -21,6 +24,7 @@ export default class Detail extends StateChange{
     store.commit('minusCount',count)
   }
   update(){
-    console.log('详情更新',store.state.count)
+    console.log('详情更新',this.$el.find("#count2").length)
+    this.$el.find("#count2").text(store.state.count)
   }
 }

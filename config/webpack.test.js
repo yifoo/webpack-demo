@@ -3,7 +3,7 @@
  * @Date: 2018-06-08 11:28:16 
  * @Desc: 生产环境
  * @Last Modified by: wuhao
- * @Last Modified time: 2018-11-01 20:46:26
+ * @Last Modified time: 2018-12-10 21:20:32
  */
 process.env.NODE_ENV = 'test'; // webpack配置内部环境,要注意位置 
 
@@ -39,6 +39,11 @@ module.exports = merge(common, {
         exclude: /node_modules/,
         use: ExtractTextPlugin.extract({fallback: "style-loader",publicPath: "../../",use: 'css-loader!postcss-loader!less-loader'
         })
+      },
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use:ExtractTextPlugin.extract({fallback: "style-loader",publicPath: "../../",use: 'css-loader!postcss-loader!sass-loader'})
       },
     ]
   },

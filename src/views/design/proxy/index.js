@@ -31,8 +31,8 @@ let agent = new Proxy(star, {
 })
 
 export default class ProxyMode {
-  constructor($el) {
-    this.$el = $el.find("#section")
+  constructor($root) {
+    this.$root = $root.find("#section")
     this.render()
     console.log(agent.name,agent.age,agent.phone,agent.price)
 
@@ -43,7 +43,7 @@ export default class ProxyMode {
   }
   render() {
     var proxyTmpl = require('./proxy.art')
-    this.$el.html(proxyTmpl())
+    this.$root.html(proxyTmpl())
   }
 }
 

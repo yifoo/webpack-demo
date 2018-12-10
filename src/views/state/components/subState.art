@@ -1,5 +1,6 @@
 <div class="detail">
   <h2>子组件😁</h2>
   <br>
+  <h2 id='count2' style='color:red'><%=count%></h2>
   <button id='minus' class='btn'>mutations减1</button>
 </div>

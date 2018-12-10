@@ -3,7 +3,7 @@
  * @Date: 2018-06-08 11:27:52 
  * @Desc: 开发环境
  * @Last Modified by: wuhao
- * @Last Modified time: 2018-11-18 00:03:39
+ * @Last Modified time: 2018-12-10 21:18:25
  */
 process.env.NODE_ENV = 'dev'; // webpack配置内部环境,要注意位置 
 const path = require('path');
@@ -11,13 +11,12 @@ const merge = require('webpack-merge');
 const webpack = require('webpack');
 const common = require('./webpack.common');
 const config = require('./config');
-const utils = require('./utils');
 var FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 console.log('路径',path.posix.join(config.dev.assetsPublicPath, 'index.html'))
 module.exports = merge(common, {
   devServer: {  //提供了一个简单的 web 服务器，并且能够实时重新加载(live reloading)
-    host: '127.0.0.1',
-    port: 8093,
+    host: '0.0.0.0',
+    port: config.dev.port,
     historyApiFallback: {
       rewrites: [
         { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'index.html') },
@@ -31,9 +30,9 @@ module.exports = merge(common, {
     hotOnly:false,
     contentBase:path.resolve(__dirname, "../dist"),  //服务器的位置
     publicPath: config.dev.assetsPublicPath,  // 绝对路径
-    watchOptions: {
-      poll: false,
-    }
+    // watchOptions: {
+    //   poll: false,
+    // }
     // proxy:{
     //   '/api':{
     //     target:'http://hwptest.mobile.taikang.com:8080/tkoper',
@@ -56,7 +55,11 @@ module.exports = merge(common, {
         test: /\.less$/,
         exclude: /node_modules/,
         use:["style-loader",{loader:'css-loader',options:{publicPath: "../../"}},'postcss-loader','less-loader'],
-        
+      },
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use:["style-loader",{loader:'css-loader',options:{publicPath: "../../"}},'postcss-loader','sass-loader'],
       },
     ],
   },
@@ -68,7 +71,7 @@ module.exports = merge(common, {
     }),
     new FriendlyErrorsWebpackPlugin({ //更好的在终端看到webapck运行的警告和错误
       compilationSuccessInfo: {
-        messages: [`App is running at: http://127.0.0.1:8093`],
+        messages: [`程序运行在: http://${config.dev.host}:${config.dev.port}`],
       },
       clearConsole: true,
     }),

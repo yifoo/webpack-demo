@@ -1,10 +1,10 @@
 export default class Vetically{
-  constructor($el){
-    this.$el = $('#section')
+  constructor($root){
+    this.$root = $root.find('#section')
     this.render()
   }
   render(){
     var tmpl = require('./vetically.art')
-    this.$el.html(tmpl())
+    this.$root.html(tmpl())
   }
 }

@@ -1,6 +1,6 @@
 export default class Detail {
-  constructor($el) {
-    this.$el = $('#detail')
+  constructor($root) {
+    this.$root = $('#detail')
     this.render()
     this.events = {
       "click   .add": 'addQuery'
@@ -8,7 +8,7 @@ export default class Detail {
   }
   render() {
     var detailTmpl = require('./detail.art')
-    this.$el.html(detailTmpl())
+    this.$root.html(detailTmpl())
   }
   addQuery(){
     window.location.href = location.hash.split('?')[0]+'?name=xiaowang'

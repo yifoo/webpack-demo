@@ -3,12 +3,12 @@
  * @Date: 2018-07-06 10:53:01 
  * @Desc: webpack打包入口
  * @Last Modified by: wuhao
- * @Last Modified time: 2018-11-18 14:45:30
+ * @Last Modified time: 2018-12-07 23:41:21
  */
 import "babel-polyfill";
 import '@/assets/css/normalize.css';
-import '@/assets/css/base.less';
-import '@/assets/css/main.less';
+import '@/assets/css/base.scss';
+import '@/assets/css/main.scss';
 
 import $ from 'jquery'
 import utils from '@/common/utils'

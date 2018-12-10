@@ -3,7 +3,7 @@
  * @Date: 2018-11-13 15:52:42 
  * @Desc: 了解虚拟DOM
  * @Last Modified by: wuhao
- * @Last Modified time: 2018-11-27 23:30:21
+ * @Last Modified time: 2018-12-08 23:34:17
  */
 /**
  * 获取节点对象
@@ -32,13 +32,13 @@ class vNode {
 }
 console.log(vNode.prototype,vNode.prototype.__proto__ ===Object.prototype)
 export default class VisualDom {
-  constructor($el) {
-    this.$el = $el
+  constructor($root) {
+    this.$root = $root
     this.render()
   }
   render() {
     var domTmpl = require('./visualDom.art')
-    this.$el.html(domTmpl())
+    this.$root.html(domTmpl())
     this.visualRender()
   }
   visualRender() {
@@ -74,6 +74,6 @@ export default class VisualDom {
       ]
     }
     let node = new vNode(element).render()
-    this.$el.find('.mount').html(node)
+    this.$root.find('.mount').html(node)
   }
 }

@@ -1,10 +1,10 @@
 export default class BubbleSort{
-  constructor($el){
-    this.$el = $('#section')
+  constructor($root){
+    this.$root = $('#section')
     this.render()
   }
   render(){
     var tmpl = require('./bubbleSort.art')
-    this.$el.html(tmpl())
+    this.$root.html(tmpl())
   }
 }

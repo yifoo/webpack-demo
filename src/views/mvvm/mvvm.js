@@ -1,6 +1,6 @@
 export default class Mvvm {
-  constructor($el) {
-    this.$el = $el
+  constructor($root) {
+    this.$root = $root
     this.render()
     this.data={
       name:'小王',
@@ -15,7 +15,7 @@ export default class Mvvm {
   }
   render() {
     var mvvmTmpl = require('./mvvm.art')
-    this.$el.html(mvvmTmpl())
+    this.$root.html(mvvmTmpl())
   }
   watch(){
     for(var key in this.data){

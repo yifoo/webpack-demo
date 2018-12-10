@@ -21,6 +21,8 @@ export default class Router {
       '/layout/vetically': 'views/layout/vetically/Vetically',
       '/error': 'views/error/error'
     }
+    // 组件挂载根元素
+    this.root = $('#main')
     // 导航菜单列表
     this.navList = $('.tab .nav-item')
     this.init()
@@ -70,8 +72,8 @@ export default class Router {
       var newURL = e.newURL.split('#')[1];
       var oldURL = e.oldURL.split('#')[1];
       console.dir({
-        newURL: newURL,
-        oldURL: oldURL
+        oldURL: oldURL,
+        newURL: newURL
       })
     }
     // 获取当前路径,默认'/index'
@@ -168,8 +170,10 @@ export default class Router {
     // import 函数会返回一个 Promise对象
     var Component = ()=>import('../'+name);
     Component().then(resp=>{
-      var controller = new resp.default($('#main'))
-        this.bindEvents.call(controller)
+      // resp.default.prototype.router = this.url
+      this.component = new resp.default(this.root)
+      this.component.$el = this.component.$root.children().first()
+        this.bindEvents.call(this.component)
         // history模式下 每次组件切换都绑定所有的链接进行处理
         if (this.mode === 'history') {
           $("#main").find('a[href]').unbind('click').on('click', this.handleLink.bind(this))

@@ -3,20 +3,20 @@
  * @Date: 2018-11-13 10:30:50 
  * @Desc: 状态管理
  * @Last Modified by: wuhao
- * @Last Modified time: 2018-11-27 23:15:05
+ * @Last Modified time: 2018-12-09 00:35:55
  */
 import Subject from './Subject'
 export default class Store {
   constructor(params) {
     var self = this
     this.mutations = params.mutations ? params.mutations : {}
-    this.actions = params.actions? params.actions : {}
+    this.actions = params.actions ? params.actions : {}
     this.status = 'resting'
     this.events = new Subject()
-    this.components = []    // 用来记录相应组件
+    this.components = [] // 用来记录相应组件
 
     this.state = new Proxy((params.state || {}), {
-      get(state,key){
+      get(state, key) {
         return state[key]
       },
       set(state, key, val) {
@@ -37,8 +37,8 @@ export default class Store {
    * @param  key 的方法属性名 
    * @param  newVal 状态的新值 
    */
-  commit(key,newVal){
-    if(typeof(this.mutations[key]) != 'function'){
+  commit(key, newVal) {
+    if (typeof (this.mutations[key]) != 'function') {
       return fasle
     }
     console.groupCollapsed(`MUTATION: ${key}`);
@@ -52,14 +52,16 @@ export default class Store {
    * @param  key 的方法属性名 
    * @param  newVal 状态的新值 
    */
-  dispatch(key,newVal){
-    if(typeof(this.actions[key]) != 'function'){
+  dispatch(key, newVal) {
+    if (typeof (this.actions[key]) != 'function') {
       return fasle
     }
-    console.groupCollapsed(`ACTION: ${key}`);
-    self.status = 'action';
-    this.actions[key](this, newVal);
-    console.groupEnd();
-    return true
+    setTimeout(()=>{
+      console.groupCollapsed(`ACTION: ${key}`);
+      self.status = 'action';
+      this.actions[key](this, newVal);
+      console.groupEnd();
+      return true
+    },0)
   }
 }

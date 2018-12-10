@@ -1,3 +1,183 @@
+<style scoped>
+  .vetically .section{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .position {
+    clear: both;
+    margin-top: 1rem;
+  }
+  .absolute{
+    position: absolute;
+    top:0;
+  }
+</style>
 <div class="vetically">
-  <h2>垂直居中</h2>
+  <section class='section'>
+    <article class="position margin">
+      <style scoped>
+        .box1 {
+          width: 300px;
+          height: 300px;
+          background: #ddd;
+          position: relative;
+        }
+
+        .child1 {
+          width: 200px;
+          height: 100px;
+          background: orange;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-top: -50px;
+          margin-left: -100px;
+        }
+      </style>
+      <h2>1.使用绝对定位和负外边距</h2>
+      <div class="box1">
+        .box {
+        width: 300px;
+        height: 300px;
+        background: #ddd;
+        position: relative;
+        }
+        <div class="child1">
+          .child {
+          width: 200px;
+          height: 100px;
+          background: orange;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-top: -50px;
+          margin-left: -100px;
+          }
+        </div>
+      </div>
+    </article>
+    <article class="position transform">
+      <style scoped>
+        .box2 {
+          width: 300px;
+          height: 300px;
+          background: #ddd;
+          position: relative;
+        }
+
+        .child2 {
+          width: 200px;
+          height: 100px;
+          background: #93BC49;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      </style>
+      <h2>2.使用绝对定位和transform</h2>
+      <div class="box2">
+        .box2 {
+          width: 300px;
+          height: 300px;
+          background: #ddd;
+          position: relative;
+        }
+        <div class="child2">
+          .child2 {
+            width: 200px;
+            height: 100px;
+            background: #93BC49;
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+          }
+        </div>
+      </div>
+    </article>
+    <article class="position margin">
+        <style scoped>
+          .box3 {
+            width: 300px;
+            height: 300px;
+            background: #ddd;
+            position: relative;
+          }
+  
+          .child3 {
+            width: 200px;
+            height: 100px;
+            background: #A1CCFE;
+            position: absolute;
+            top: 0;
+            left:0;
+            right:0;
+            bottom: 0;
+            margin: auto;
+          }
+        </style>
+        <h2>3.绝对定位结合margin: auto</h2>
+        <div class="box3">
+          .box {
+          width: 300px;
+          height: 300px;
+          background: #ddd;
+          position: relative;
+          }
+          <div class="child3">
+            .child {
+              width: 200px;
+              height: 100px;
+              background: #A1CCFE;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              margin: auto;
+            }
+          </div>
+        </div>
+      </article>
+    <article class="position margin">
+        <style scoped>
+          .box4 {
+            width: 300px;
+            height: 300px;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+          }
+          .child4 {
+            width: 200px;
+            height: 100px;
+            background: rgb(209, 240, 194);
+          }
+        </style>
+        <h2>4.使用flex布局</h2>
+        <div class="box4">
+           <p class="absolute">
+              .box4 {
+                width: 300px;
+                height: 300px;
+                background: #ddd;
+                display: flex;
+                align-items: center;
+                 justify-content: center;
+              }
+           </p>
+          <div class="child4">
+              .child4 {
+                width: 200px;
+                height: 100px;
+                background: rgb(209, 240, 194);
+              }
+          </div>
+        </div>
+      </article>
+  </section>
 </div>

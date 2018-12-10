@@ -1,10 +1,10 @@
 export default class Error{
-  constructor($el){
-    this.$el = $el
+  constructor($root){
+    this.$root = $root
     this.render()
   }
   render(){
     var errorTmpl = require('./error.art')
-    this.$el.html(errorTmpl)
+    this.$root.html(errorTmpl)
   }
 }

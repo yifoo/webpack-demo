@@ -13,3 +13,4 @@ logs/
 *.mmap
 *.php
 demo.html
+static/test

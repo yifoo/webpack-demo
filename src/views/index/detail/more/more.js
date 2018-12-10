@@ -1,10 +1,10 @@
 export default class More {
   constructor($el) {
-    this.$el = $('#more')
+    this.$root = $('#more')
     this.render()
   }
   render() {
     var moreTmpl = require('./more.art')
-      this.$el.html(moreTmpl())
+      this.$root.html(moreTmpl())
   }
 }

@@ -1,6 +1,6 @@
 export default class Layout{
-  constructor($el){
-    this.$el = $el
+  constructor($root){
+    this.$root = $root
     this.render()
     this.events = {
       "click     .tab-link>a": "choose"
@@ -8,7 +8,7 @@ export default class Layout{
   }
   render(){
     var tmpl = require('./layout.art')
-    this.$el.html(tmpl())
+    this.$root.html(tmpl())
   }
   choose(e){
     var target = $(e.target)

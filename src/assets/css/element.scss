@@ -1,0 +1,20 @@
+@charset "utf-8";
+@import "./layout.scss";
+@mixin btn($size:.5rem,$height:30px,$color:#fff,$bgcolor:#333,$padding:5px,$radius:5px) {
+  font-size:$size;
+  padding:$padding;
+  height:$height;
+  width:auto;
+  border:none;
+  background-color:$bgcolor;
+  border-radius:$radius;
+  color:$color;
+  box-shadow: 0 0 1px #000;
+  cursor:pointer;
+}
+@mixin input ($margin:5px,$padding:5px,$bgcolor:lightyellow){
+  margin:$margin;
+  padding:$padding;
+  background:$bgcolor;
+  
+}
