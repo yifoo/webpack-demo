@@ -44,6 +44,7 @@
     "webpack-merge": "^4.1.1"
   },
   "dependencies": {
-    "art-template": "^4.13.1"
+    "art-template": "^4.13.1",
+    "xlsx": "^0.14.1"
   }
 }

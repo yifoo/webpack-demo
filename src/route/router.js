@@ -19,6 +19,7 @@ export default class Router {
       '/layout': 'views/layout',
       '/layout/three': 'views/layout/three/ThreeAdapt',
       '/layout/vetically': 'views/layout/vetically/Vetically',
+      '/toExcel': 'views/toExcel',
       '/error': 'views/error/error'
     }
     // 组件挂载根元素

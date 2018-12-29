@@ -1,0 +1,246 @@
+  <table cellspacing="0" cellpadding="0" border="0" class="layui-table">
+    <thead>
+      <tr>
+        <th data-field="learnId">
+          <div class="layui-table-cell laytable-cell-1-learnId" align="center"><span>ID</span></div>
+        </th>
+        <th data-field="newsType">
+          <div class="layui-table-cell laytable-cell-1-newsType" align="center"><span>类型</span></div>
+        </th>
+        <th data-field="title">
+          <div class="layui-table-cell laytable-cell-1-title" align="center"><span>标题</span></div>
+        </th>
+        <th data-field="picUrl">
+          <div class="layui-table-cell laytable-cell-1-picUrl" align="center"><span>图片</span></div>
+        </th>
+        <th data-field="labelList">
+          <div class="layui-table-cell laytable-cell-1-labelList" align="center"><span>标签</span></div>
+        </th>
+        <th data-field="permissionList">
+          <div class="layui-table-cell laytable-cell-1-permissionList" align="center"><span>权限状态</span></div>
+        </th>
+        <th data-field="stick">
+          <div class="layui-table-cell laytable-cell-1-stick" align="center"><span>置顶状态</span></div>
+        </th>
+        <th data-field="userCode">
+          <div class="layui-table-cell laytable-cell-1-userCode" align="center"><span>发布人</span></div>
+        </th>
+        <th data-field="status">
+          <div class="layui-table-cell laytable-cell-1-status" align="center"><span>发布状态</span></div>
+        </th>
+        <th data-field="createTime">
+          <div class="layui-table-cell laytable-cell-1-createTime" align="center"><span>发布时间</span></div>
+        </th>
+        <th data-field="10">
+          <div class="layui-table-cell laytable-cell-1-10" align="center"><span>操作</span></div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-index="0">
+        <td data-field="learnId" align="center" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-learnId">681</div>
+        </td>
+        <td data-field="newsType" align="center" data-content="0" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-newsType">新建资讯</div>
+        </td>
+        <td data-field="title" align="center" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-title">测试意思下阿斯达</div>
+        </td>
+        <td data-field="picUrl" align="center" data-content="http://hwpfiletest.mobile.taikang.com/file/bbfb2f597a014742a9ae6f4f603a155d.jpg"
+          style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-picUrl"><img src="http://hwpfiletest.mobile.taikang.com/file/bbfb2f597a014742a9ae6f4f603a155d.jpg"></div>
+        </td>
+        <td data-field="labelList" align="center" data-content="[object Object]" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-labelList"><span>金融</span></div>
+        </td>
+        <td data-field="permissionList" align="center" data-content="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
+          style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-permissionList"><span>内勤、</span><span>F1渠道、</span><span>个险渠道、</span><span>团险渠道、</span><span>银保渠道、</span><span>经代渠道、</span><span>电销渠道</span></div>
+        </td>
+        <td data-field="stick" align="center" data-content="0" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-stick">未置顶</div>
+        </td>
+        <td data-field="userCode" align="center" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-userCode"></div>
+        </td>
+        <td data-field="status" align="center" data-content="2" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-status">已下线</div>
+        </td>
+        <td data-field="createTime" align="center" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-createTime"></div>
+        </td>
+        <td data-field="10" align="center" data-content="">
+          <div class="layui-table-cell laytable-cell-1-10">
+            <div class="flex"><a class="layui-btn layui-btn-xs over" lay-event="preview">预览</a><a class="layui-btn layui-btn-green layui-btn-xs over"
+                data-newstype="0" lay-event="edit">编辑</a><a class="layui-btn layui-btn-warm layui-btn-xs over"
+                data-stick="0" lay-event="stick">置顶</a><a class="layui-btn layui-btn-normal layui-btn-xs over"
+                data-status="2" lay-event="submit">再次发布</a></div>
+          </div>
+        </td>
+      </tr>
+      <tr data-index="1">
+        <td data-field="learnId" align="center" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-learnId">779</div>
+        </td>
+        <td data-field="newsType" align="center" data-content="1" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-newsType">嵌入链接</div>
+        </td>
+        <td data-field="title" align="center" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-title">私人健康 | 山重水复疑无路，日本医疗来帮助</div>
+        </td>
+        <td data-field="picUrl" align="center" data-content="" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-picUrl"></div>
+        </td>
+        <td data-field="labelList" align="center" data-content="[object Object]" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-labelList"><span>其他</span></div>
+        </td>
+        <td data-field="permissionList" align="center" data-content="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
+          style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-permissionList"><span>内勤、</span><span>F1渠道、</span><span>个险渠道、</span><span>团险渠道、</span><span>银保渠道、</span><span>经代渠道、</span><span>电销渠道</span></div>
+        </td>
+        <td data-field="stick" align="center" data-content="1" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-stick">置顶</div>
+        </td>
+        <td data-field="userCode" align="center" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-userCode"></div>
+        </td>
+        <td data-field="status" align="center" data-content="2" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-status">已下线</div>
+        </td>
+        <td data-field="createTime" align="center" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-createTime"></div>
+        </td>
+        <td data-field="10" align="center" data-content="">
+          <div class="layui-table-cell laytable-cell-1-10">
+            <div class="flex"><a class="layui-btn layui-btn-green layui-btn-xs over" data-newstype="1" lay-event="edit">编辑</a><a
+                class="layui-btn layui-btn-gray layui-btn-xs over" data-stick="1" lay-event="stick">取消置顶</a><a class="layui-btn layui-btn-normal layui-btn-xs over"
+                data-status="2" lay-event="submit">再次发布</a></div>
+          </div>
+        </td>
+      </tr>
+      <tr data-index="2">
+        <td data-field="learnId" align="center" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-learnId">425</div>
+        </td>
+        <td data-field="newsType" align="center" data-content="0" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-newsType">新建资讯</div>
+        </td>
+        <td data-field="title" align="center" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-title">测试标题</div>
+        </td>
+        <td data-field="picUrl" align="center" data-content="" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-picUrl"></div>
+        </td>
+        <td data-field="labelList" align="center" data-content="[object Object]" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-labelList"><span>金融</span></div>
+        </td>
+        <td data-field="permissionList" align="center" data-content="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
+          style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-permissionList"><span>内勤、</span><span>F1渠道、</span><span>团险渠道、</span><span>银保渠道、</span><span>经代渠道、</span><span>电销渠道</span></div>
+        </td>
+        <td data-field="stick" align="center" data-content="0" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-stick">未置顶</div>
+        </td>
+        <td data-field="userCode" align="center" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-userCode"></div>
+        </td>
+        <td data-field="status" align="center" data-content="2" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-status">已下线</div>
+        </td>
+        <td data-field="createTime" align="center" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-createTime"></div>
+        </td>
+        <td data-field="10" align="center" data-content="">
+          <div class="layui-table-cell laytable-cell-1-10">
+            <div class="flex"><a class="layui-btn layui-btn-xs over" lay-event="preview">预览</a><a class="layui-btn layui-btn-green layui-btn-xs over"
+                data-newstype="0" lay-event="edit">编辑</a><a class="layui-btn layui-btn-warm layui-btn-xs over"
+                data-stick="0" lay-event="stick">置顶</a><a class="layui-btn layui-btn-normal layui-btn-xs over"
+                data-status="2" lay-event="submit">再次发布</a></div>
+          </div>
+        </td>
+      </tr>
+      <tr data-index="3">
+        <td data-field="learnId" align="center" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-learnId">442</div>
+        </td>
+        <td data-field="newsType" align="center" data-content="0" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-newsType">新建资讯</div>
+        </td>
+        <td data-field="title" align="center" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-title">22222</div>
+        </td>
+        <td data-field="picUrl" align="center" data-content="" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-picUrl"></div>
+        </td>
+        <td data-field="labelList" align="center" data-content="[object Object]" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-labelList"><span>金融</span></div>
+        </td>
+        <td data-field="permissionList" align="center" data-content="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
+          style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-permissionList"><span>内勤、</span><span>F1渠道、</span><span>个险渠道、</span><span>团险渠道、</span><span>银保渠道、</span><span>经代渠道、</span><span>电销渠道</span></div>
+        </td>
+        <td data-field="stick" align="center" data-content="0" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-stick">未置顶</div>
+        </td>
+        <td data-field="userCode" align="center" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-userCode"></div>
+        </td>
+        <td data-field="status" align="center" data-content="2" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-status">已下线</div>
+        </td>
+        <td data-field="createTime" align="center" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-createTime"></div>
+        </td>
+        <td data-field="10" align="center" data-content="">
+          <div class="layui-table-cell laytable-cell-1-10">
+            <div class="flex"><a class="layui-btn layui-btn-xs over" lay-event="preview">预览</a><a class="layui-btn layui-btn-green layui-btn-xs over"
+                data-newstype="0" lay-event="edit">编辑</a><a class="layui-btn layui-btn-warm layui-btn-xs over"
+                data-stick="0" lay-event="stick">置顶</a><a class="layui-btn layui-btn-normal layui-btn-xs over"
+                data-status="2" lay-event="submit">再次发布</a></div>
+          </div>
+        </td>
+      </tr>
+      <tr data-index="4">
+        <td data-field="learnId" align="center" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-learnId">438</div>
+        </td>
+        <td data-field="newsType" align="center" data-content="0" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-newsType">新建资讯</div>
+        </td>
+        <td data-field="title" align="center" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-title">07-18测试</div>
+        </td>
+        <td data-field="picUrl" align="center" data-content="" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-picUrl"></div>
+        </td>
+        <td data-field="labelList" align="center" data-content="[object Object]" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-labelList"><span>金融</span></div>
+        </td>
+        <td data-field="permissionList" align="center" data-content="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
+          style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-permissionList"><span>内勤、</span><span>F1渠道、</span><span>个险渠道、</span><span>团险渠道、</span><span>银保渠道、</span><span>经代渠道、</span><span>电销渠道</span></div>
+        </td>
+        <td data-field="stick" align="center" data-content="0" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-stick">未置顶</div>
+        </td>
+        <td data-field="userCode" align="center" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-userCode"></div>
+        </td>
+        <td data-field="status" align="center" data-content="2" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-status">已下线</div>
+        </td>
+        <td data-field="createTime" align="center" style="height:auto">
+          <div class="layui-table-cell laytable-cell-1-createTime"></div>
+        </td>
+        <td data-field="10" align="center" data-content="">
+          <div class="layui-table-cell laytable-cell-1-10">
+            <div class="flex"><a class="layui-btn layui-btn-xs over" lay-event="preview">预览</a><a class="layui-btn layui-btn-green layui-btn-xs over"
+                data-newstype="0" lay-event="edit">编辑</a><a class="layui-btn layui-btn-warm layui-btn-xs over"
+                data-stick="0" lay-event="stick">置顶</a><a class="layui-btn layui-btn-normal layui-btn-xs over"
+                data-status="2" lay-event="submit">再次发布</a></div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
