@@ -3,7 +3,7 @@
  * @Date: 2018-06-08 11:27:52 
  * @Desc: 开发环境
  * @Last Modified by: wuhao
- * @Last Modified time: 2018-12-10 21:18:25
+ * @Last Modified time: 2019-01-05 09:14:38
  */
 process.env.NODE_ENV = 'dev'; // webpack配置内部环境,要注意位置 
 const path = require('path');
@@ -11,7 +11,7 @@ const merge = require('webpack-merge');
 const webpack = require('webpack');
 const common = require('./webpack.common');
 const config = require('./config');
-var FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 console.log('路径',path.posix.join(config.dev.assetsPublicPath, 'index.html'))
 module.exports = merge(common, {
   devServer: {  //提供了一个简单的 web 服务器，并且能够实时重新加载(live reloading)

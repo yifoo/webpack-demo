@@ -20,6 +20,10 @@ export default class Router {
       '/layout/three': 'views/layout/three/ThreeAdapt',
       '/layout/vetically': 'views/layout/vetically/Vetically',
       '/toExcel': 'views/toExcel',
+      '/h5live': 'views/h5live',
+      '/data': 'views/dataStructure',
+      '/data/stack': 'views/dataStructure/stack/stack',
+      '/data/queue': 'views/dataStructure/queue/queue',
       '/error': 'views/error/error'
     }
     // 组件挂载根元素
@@ -173,7 +177,7 @@ export default class Router {
     Component().then(resp=>{
       // resp.default.prototype.router = this.url
       this.component = new resp.default(this.root)
-      this.component.$el = this.component.$root.children().first()
+      this.component.$el = this.component.$el || this.component.$root.children().first()
         this.bindEvents.call(this.component)
         // history模式下 每次组件切换都绑定所有的链接进行处理
         if (this.mode === 'history') {

@@ -1,4 +1,4 @@
-export default class Layout{
+export default class DataStructure{
   constructor($root){
     this.$root = $root
     this.render()
@@ -7,8 +7,9 @@ export default class Layout{
     }
   }
   render(){
-    var tmpl = require('./layout.art')
-    this.$root.html(tmpl())
+    var dataTmpl = require('./dataTmpl.art')
+    this.$root.html(dataTmpl())
+    this.$el = this.$root.children().first()
   }
   choose(e){
     var target = $(e.target)

@@ -1,0 +1,25 @@
+<div class="h5-live">
+  <h1>live</h1>
+  <video id="my-player" class="video-js" controls preload="auto">
+    <!-- <source src="http://hwpfiletest.mobile.taikang.com/file/mp4/edd4282dcf2740fb901f835f7297723c.mp4" type="video/mp4">
+    </source> -->
+    <!-- <source
+     src="https://1256993030.vod2.myqcloud.com/d520582dvodtransgzp1256993030/cc9f922c5285890781386012275/v.f220.m3u8"
+     type="application/x-mpegURL"> -->
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="http://videojs.com/html5-video-support/" target="_blank">
+        supports HTML5 video
+      </a>
+    </p>
+  </video>
+</div>
+<style>
+  .video-js .vjs-big-play-button{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%)
+  }
+</style>
