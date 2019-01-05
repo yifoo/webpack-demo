@@ -24,6 +24,7 @@ var Stack = function() {
   this.size=function(){
     return item.length
   }
+  // 获取数据
   this.getItems=function(){
     return item
   }

@@ -1,5 +1,6 @@
 <div class='data'>
-  <h1>布局 </h1>
+  <h1>数据结构</h1>
+  <p>学习数据结构与算法的思想</p>
   <div class="tab">
     <ul>
       <li class='tab-link'><a href="#/data/stack">栈</a></li>
