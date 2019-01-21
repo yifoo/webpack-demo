@@ -30,6 +30,7 @@
     "html-webpack-plugin": "^2.30.1",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
+    "markdown-loader": "^4.0.0",
     "node-sass": "^4.10.0",
     "postcss-loader": "^2.1.0",
     "sass-loader": "^7.1.0",
@@ -44,6 +45,7 @@
     "webpack-merge": "^4.1.1"
   },
   "dependencies": {
+    "@notadd/neditor": "^2.1.14",
     "art-template": "^4.13.1",
     "video.js": "^7.4.1",
     "videojs-contrib-hls": "^5.15.0",

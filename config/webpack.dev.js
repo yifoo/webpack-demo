@@ -3,7 +3,7 @@
  * @Date: 2018-06-08 11:27:52 
  * @Desc: 开发环境
  * @Last Modified by: wuhao
- * @Last Modified time: 2019-01-05 09:14:38
+ * @Last Modified time: 2019-01-07 13:18:25
  */
 process.env.NODE_ENV = 'dev'; // webpack配置内部环境,要注意位置 
 const path = require('path');

@@ -3,7 +3,7 @@
  * @Date: 2018-10-30 15:49:46 
  * @Desc: 样式重置
  * @Last Modified by: wuhao
- * @Last Modified time: 2018-12-10 21:20:52
+ * @Last Modified time: 2019-01-07 13:46:40
  */
 @charset "utf-8";
 /* CSS Document */
@@ -186,7 +186,14 @@ textarea:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #d9d9d9;
 }
+code {
+  font-family: Consolas, Monaco, Andale Mono, monospace;
+}
 
+pre {
+  padding:1rem .5rem;
+  line-height: 1.2rem;
+}
 
 // /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
 

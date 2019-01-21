@@ -35,6 +35,8 @@ export default class QueueComponent {
     $root.find("a[href='#/data/queue']").addClass("active")
     this.render()
     this.init()
+    var markdown = require("./js.md")
+    this.$el.find("#pre").html(markdown)
   }
   render() {
     var queue = require('./queue.art')
@@ -50,7 +52,6 @@ export default class QueueComponent {
     console.log('front', q.front())
 
     var arr = ['a', 'b', 'c', 'd', 'e', 'f']
-    // this.spread(arr, 3)
     console.log('最后一个被淘汰的选手 ', this.spread(arr, 3));
   }
   // 击鼓传花

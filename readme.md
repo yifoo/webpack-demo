@@ -1,6 +1,6 @@
 ## Webpack +jQuery 单页面Demo 
 
-预览链接:[点击访问](https://www.haohome.top/webpack-spa/)
+预览链接:[点击访问](http://test.haohome.top/webpack-spa/)
 
 PS: 原本仅仅是写一个学习webpack配置的小demo，后来在学习其他功能的时候都需要用到js的模块功能，每次写案例都是单独开一个demo，过一段时间再去找又很麻烦,所以干脆在这个项目上去实现，正好可以记录我学习的过程。能力有限,大家发现问题希望及时指出,谢谢!
 

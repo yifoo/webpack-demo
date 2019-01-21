@@ -24,6 +24,7 @@ export default class Router {
       '/data': 'views/dataStructure',
       '/data/stack': 'views/dataStructure/stack/stack',
       '/data/queue': 'views/dataStructure/queue/queue',
+      '/editor': 'views/richEditor',
       '/error': 'views/error/error'
     }
     // 组件挂载根元素
