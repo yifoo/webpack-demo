@@ -1,0 +1,562 @@
+@font-face {
+  font-family: Source Han Sans SC;
+  font-weight: normal;
+  src: local('Source Han Sans SC Regular'), url("catfish/SourceHanSansSC-Regular.otf");
+}
+
+@font-face {
+  font-family: Source Han Sans;
+  font-weight: bold;
+  src: local('Source Han Sans SC Bold'), url("catfish/SourceHanSansSC-Bold.otf");
+}
+
+@font-face {
+  font-family: Source Han Serif;
+  font-weight: normal;
+  src: local('Source Han Serif SC Regular'), url("catfish/SourceHanSerifSC-Regular.otf");
+}
+
+@font-face {
+  font-family: Source Han Serif;
+  font-weight: bold;
+  src: local('Source Han Serif SC Bold'), url("catfish/SourceHanSerifSC-Bold.otf");
+}
+
+@font-face {
+  font-family: 'Source Code Pro';
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  src: url('./catfish/SourceCodePro-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: mononoki;
+  font-style: normal;
+  font-weight: normal;
+  src: local('mononoki Regular'), url("catfish/mononoki-Regular.woff");
+}
+
+@font-face {
+  font-family: mononoki;
+  font-style: italic;
+  font-weight: normal;
+  src: local('mononoki Italic'), url("catfish/mononoki-Italic.woff");
+}
+
+@font-face {
+  font-family: mononoki;
+  font-style: normal;
+  font-weight: bold;
+  src: local('mononoki Bold'), url("catfish/mononoki-Bold.woff");
+}
+
+@font-face {
+  font-family: mononoki;
+  font-style: italic;
+  font-weight: bold;
+  src: local('mononoki Bold Italic'), url("catfish/mononoki-BoldItalic.woff");
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background: #fff;
+  font-family: Source Han Sans SC, sans-serif;
+  color: #2c3f51;
+}
+
+#write {
+  max-width: 60em;
+  margin: 0 auto;
+  padding: 20px 30px 50px;
+}
+/* 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-weight: bold;
+  line-height: 1.4em;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1.2em;
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 1.225em;
+}
+
+h3 {
+  font-size: 1.3em;
+  line-height: 1.43em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: 1em;
+  color: #999;
+} */
+
+hr {
+  border: 1px solid #ddd;
+}
+
+a {
+  text-decoration: none;
+  color: #258fb8;
+}
+
+ul,
+ol {
+  padding-left: 2em;
+}
+
+.task-list {
+  padding-left: 2em;
+}
+
+.task-list-item {
+  padding-left: 1.6em;
+}
+
+.task-list-item input {
+  top: 3px;
+  left: 8px;
+}
+
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table thead {
+    background-color: rgba(66, 185, 101, .2);
+}
+table tr:nth-child(2n){
+  background-color: #f9f9f9;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+blockquote {
+  border-left: 4px solid #42b983;
+  padding: 10px 0px 10px 15px;
+  color: #777;
+  background-color: rgba(66, 185, 131, .1);
+}
+
+blockquote blockquote {
+  padding-right: 0;
+}
+
+code {
+  background-color: #f9f2f4;
+  color: #c7254e;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-family: 'Source Code Pro', monospace;
+  white-space: normal;
+  padding: 2px 4px;
+}
+
+.md-fences,
+tt {
+  margin: 0 0.3em;
+  padding: 0 0.3em;
+  background: #eee;
+  font-family: 'Source Code Pro', monospace;
+  text-shadow: 0 1px #fff;
+}
+
+.md-fences {
+  margin: 10px auto;
+  padding: 0.7em 1em;
+  text-shadow: none;
+}
+
+/** ported from https://codemirror.net/theme/material.css **/
+
+/*
+
+      Name:       material
+      Author:     Michael Kaminsky (http://github.com/mkaminsky11)
+
+      Original material color scheme by Mattia Astorino (https://github.com/equinusocio/material-theme)
+
+  */
+
+.hljs {
+  background-color: #263238;
+  color: rgba(233, 237, 237, 1);
+}
+
+.hljs .CodeMirror-gutters {
+  background: #263238;
+  color: rgb(83, 127, 126);
+  border: none;
+}
+
+.hljs .CodeMirror-guttermarker,
+.hljs .CodeMirror-guttermarker-subtle,
+.hljs .CodeMirror-linenumber {
+  color: rgb(83, 127, 126);
+}
+
+.hljs .CodeMirror-cursor {
+  border-left: 1px solid #f8f8f0;
+}
+
+.hljs div.CodeMirror-selected {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.hljs.CodeMirror-focused div.CodeMirror-selected {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.hljs .CodeMirror-line::selection,
+.hljs .CodeMirror-line>span::selection,
+.hljs .CodeMirror-line>span>span::selection {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.hljs .CodeMirror-line::-moz-selection,
+.hljs .CodeMirror-line>span::-moz-selection,
+.hljs .CodeMirror-line>span>span::-moz-selection {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.hljs .CodeMirror-activeline-background {
+  background: rgba(0, 0, 0, 0);
+}
+
+.hljs .hljs-keyword {
+  color: rgba(199, 146, 234, 1);
+}
+
+.hljs .hljs-operator {
+  color: rgba(233, 237, 237, 1);
+}
+
+.hljs .hljs-variable-2 {
+  color: #80CBC4;
+}
+
+.hljs .hljs-variable-3 {
+  color: #82B1FF;
+}
+
+.hljs .hljs-builtin {
+  color: #DECB6B;
+}
+
+.hljs .hljs-atom {
+  color: #F77669;
+}
+
+.hljs .hljs-number {
+  color: #F77669;
+}
+
+.hljs .hljs-def {
+  color: rgba(233, 237, 237, 1);
+}
+
+.hljs .hljs-string {
+  color: #C3E88D;
+}
+
+.hljs .hljs-string-2 {
+  color: #80CBC4;
+}
+
+.hljs .hljs-comment {
+  color: #546E7A;
+  display: block;
+}
+
+.hljs .hljs-variable {
+  color: #82B1FF;
+}
+
+.hljs .hljs-tag {
+  color: #80CBC4;
+}
+
+.hljs .hljs-meta {
+  color: #80CBC4;
+}
+
+.hljs .hljs-attribute {
+  color: #FFCB6B;
+}
+
+.hljs .hljs-property {
+  color: #80CBAE;
+}
+
+.hljs .hljs-qualifier {
+  color: #DECB6B;
+}
+
+.hljs .hljs-variable-3 {
+  color: #DECB6B;
+}
+
+.hljs .hljs-tag {
+  color: rgba(255, 83, 112, 1);
+}
+
+.hljs .hljs-error {
+  color: rgba(255, 255, 255, 1.0);
+  background-color: #EC5F67;
+}
+
+.hljs .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important;
+}
+
+/**apply to code fences with plan text**/
+
+.md-fences {
+  background-color: #263238;
+  color: rgba(233, 237, 237, 1);
+  border: none;
+}
+
+.md-fences .code-tooltip {
+  background-color: #263238;
+}
+
+.hljs-default {
+  background-color: #263238;
+  color: rgba(233, 237, 237, 1);
+}
+
+.hljs-default .CodeMirror-gutters {
+  background: #263238;
+  color: rgb(83, 127, 126);
+  border: none;
+}
+
+.hljs-default .CodeMirror-guttermarker,
+.hljs-default .CodeMirror-guttermarker-subtle,
+.hljs-default .CodeMirror-linenumber {
+  color: rgb(83, 127, 126);
+}
+
+.hljs-default .CodeMirror-cursor {
+  border-left: 1px solid #f8f8f0;
+}
+
+.hljs-default div.CodeMirror-selected {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.hljs-default.CodeMirror-focused div.CodeMirror-selected {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.hljs-default .CodeMirror-line::selection,
+.hljs-default .CodeMirror-line>span::selection,
+.hljs-default .CodeMirror-line>span>span::selection {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.hljs-default .CodeMirror-line::-moz-selection,
+.hljs-default .CodeMirror-line>span::-moz-selection,
+.hljs-default .CodeMirror-line>span>span::-moz-selection {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.hljs-default .CodeMirror-activeline-background {
+  background: rgba(0, 0, 0, 0);
+}
+
+.hljs-default .hljs-keyword {
+  color: rgba(199, 146, 234, 1);
+}
+
+.hljs-default .hljs-operator {
+  color: rgba(233, 237, 237, 1);
+}
+
+.hljs-default .hljs-variable-2 {
+  color: #80CBC4;
+}
+
+.hljs-default .hljs-variable-3 {
+  color: #82B1FF;
+}
+
+.hljs-default .hljs-builtin {
+  color: #DECB6B;
+}
+
+.hljs-default .hljs-atom {
+  color: #F77669;
+}
+
+.hljs-default .hljs-number {
+  color: #F77669;
+}
+
+.hljs-default .hljs-def {
+  color: rgba(233, 237, 237, 1);
+}
+
+.hljs-default .hljs-string {
+  color: #C3E88D;
+}
+
+.hljs-default .hljs-string-2 {
+  color: #80CBC4;
+}
+
+.hljs-default .hljs-comment {
+  color: #546E7A;
+}
+
+.hljs-default .hljs-variable {
+  color: #82B1FF;
+}
+
+.hljs-default .hljs-tag {
+  color: #80CBC4;
+}
+
+.hljs-default .hljs-meta {
+  color: #80CBC4;
+}
+
+.hljs-default .hljs-attribute {
+  color: #FFCB6B;
+}
+
+.hljs-default .hljs-property {
+  color: #80CBAE;
+}
+
+.hljs-default .hljs-qualifier {
+  color: #DECB6B;
+}
+
+.hljs-default .hljs-variable-3 {
+  color: #DECB6B;
+}
+
+.hljs-default .hljs-tag {
+  color: rgba(255, 83, 112, 1);
+}
+
+.hljs-default .hljs-error {
+  color: rgba(255, 255, 255, 1.0);
+  background-color: #EC5F67;
+}
+
+.hljs-default .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important;
+}
+
+/**apply to code fences with plan text**/
+
+.md-fences {
+  background-color: #263238;
+  color: rgba(233, 237, 237, 1);
+  border: none;
+}
+
+.md-fences .code-tooltip {
+  background-color: #263238;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+  border-left: 1px solid #e4629a;
+}
+
+#write pre.md-meta-block {
+  padding: 1em;
+  background-color: #fff;
+  border-bottom: 1px dashed #ddd;
+  color: #80cbc4;
+  margin-top: 0 !important;
+}
+
+.md-image>.md-meta {
+  color: inherit;
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+  font-family: Source Han Sans SC, sans-serif;
+}
+
+@media print {
+  html {
+    font-size: 13px;
+  }
+  table,
+  pre {
+    page-break-inside: avoid;
+  }
+  pre {
+    word-wrap: break-word;
+  }
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+  font-family: Helvetica Neue, Helvetica, Segoe UI, Arial, sans-serif;
+}
+
+.md-diagram-panel-preview {
+  color: #263238;
+}

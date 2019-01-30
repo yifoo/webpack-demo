@@ -10,6 +10,7 @@ export default class Router {
       '/design': 'views/design',
       '/design/subscribe': 'views/design/subscribe/index',
       '/design/proxy': 'views/design/proxy/index',
+      '/design/login': 'views/design/login',
       '/state': 'views/state/stateDemo',
       '/state/sub': 'views/state/components/subState',
       '/dom': 'views/visualDom/visualDom',
@@ -103,7 +104,9 @@ export default class Router {
    */
   loadView(currentURL) {
     if (this.mode === 'history' && currentURL === '/') {
-      history.replaceState({path: '/'}, null, '/')
+      history.replaceState({
+        path: '/'
+      }, null, '/')
       currentURL = '/index'
     }
     // 多级链接拆分为数组,遍历依次加载
@@ -122,8 +125,8 @@ export default class Router {
         return false
       }
       // 对于嵌套路由的处理
-      if (this.oldURL && this.oldURL[index]==this.currentURLlist[index]) {
-        this.handleSubRouter(item,index)
+      if (this.oldURL && this.oldURL[index] == this.currentURLlist[index]) {
+        this.handleSubRouter(item, index)
       } else {
         this.controller(this.name)
       }
@@ -136,7 +139,7 @@ export default class Router {
    * @param {string} item 链接list中当前项
    * @param {number} index 链接list中当前索引
    */
-  handleSubRouter(item,index){
+  handleSubRouter(item, index) {
     // 新路由是旧路由的子级
     if (this.oldURL.length < this.currentURLlist.length) {
       // 相同路由部分不重新加载
@@ -160,7 +163,9 @@ export default class Router {
     if (this.mode === 'hash') {
       location.href = '#/error'
     } else {
-      history.replaceState({path: '/error'}, null, '/error')
+      history.replaceState({
+        path: '/error'
+      }, null, '/error')
       this.loadView('/error')
     }
   }
@@ -174,27 +179,33 @@ export default class Router {
     // var controller = new Component($('#main'))
     // this.bindEvents.call(controller)
     // import 函数会返回一个 Promise对象
-    var Component = ()=>import('../'+name);
-    Component().then(resp=>{
+    var Component = () => import('../' + name);
+    Component().then(resp => {
       // resp.default.prototype.router = this.url
       this.component = new resp.default(this.root)
       this.component.$el = this.component.$el || this.component.$root.children().first()
-        this.bindEvents.call(this.component)
-        // history模式下 每次组件切换都绑定所有的链接进行处理
-        if (this.mode === 'history') {
-          $("#main").find('a[href]').unbind('click').on('click', this.handleLink.bind(this))
-        }
+      this.bindEvents.call(this.component)
+      // history模式下 每次组件切换都绑定所有的链接进行处理
+      if (this.mode === 'history') {
+        $("#main").find('a[href]').unbind('click').on('click', this.handleLink.bind(this))
+      }
+    }).then(()=>{
+      document.querySelectorAll('code').forEach((block) => {
+        hljs.highlightBlock(block);
+      });
     })
   }
   /**
    * 手动跳转路由
    * @param {string} path 
    */
-  push(path){
-    if(this.mode === 'hash'){
-      location.hash = '#'+path
-    }else{
-      history.pushState({path: path}, null, path)
+  push(path) {
+    if (this.mode === 'hash') {
+      location.hash = '#' + path
+    } else {
+      history.pushState({
+        path: path
+      }, null, path)
       // 加载相应页面
       this.loadView(path.split('?')[0])
     }

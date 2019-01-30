@@ -3,7 +3,7 @@
  * @Date: 2018-06-22 13:57:02 
  * @Desc: webpack基础配置
  * @Last Modified by: wuhao
- * @Last Modified time: 2019-01-07 13:18:45
+ * @Last Modified time: 2019-01-24 17:29:23
  */
 // require("babel-polyfill");
 const path = require('path');
@@ -12,6 +12,8 @@ const webpack = require('webpack');
 const config = require('./config')
 const utils = require('./utils')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const marked = require("marked");
+const renderer = new marked.Renderer();
 /** 路径解析 */
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
@@ -19,20 +21,19 @@ function resolve(dir) {
 module.exports = {
   context: path.resolve(__dirname, '../'),
   devtool: config.dev.devtool,
-  entry: {  //入口
+  entry: { //入口
     main: path.resolve(__dirname, '../src/main.js'),
   },
   output: { // 输出目录
     path: config.build.assetsRoot,
     filename: utils.assetsPath('[name].[chunkhash].js'),
     chunkFilename: utils.assetsPath('js/lazy/[name].[chunkhash].js'),
-    publicPath: process.env.NODE_ENV === 'test'
-      ? config.build.assetsPublicPath
-      : config.dev.assetsPublicPath
+    publicPath: process.env.NODE_ENV === 'test' ?
+      config.build.assetsPublicPath : config.dev.assetsPublicPath
   },
   resolve: {
     alias: {
-      jquery: path.resolve(__dirname, '../static/lib/jquery-3.2.1.js'),// 本地第三方插件
+      jquery: path.resolve(__dirname, '../static/lib/jquery-3.2.1.js'), // 本地第三方插件
       '@': resolve('src'), // 路径指代
       '#': resolve('dist')
     }
@@ -43,7 +44,9 @@ module.exports = {
       {
         test: /\.js$/,
         include: [path.resolve(__dirname, '../src')],
-        use: { loader: 'babel-loader', }
+        use: {
+          loader: 'babel-loader',
+        }
       },
       /**编译art模板 */
       {
@@ -61,12 +64,31 @@ module.exports = {
         }
       },
       {
+
+        //文件加载器，处理文件静态资源
+        test: /\.(woff|woff2|ttf|eot|otf|ttc|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'file-loader',
+        options:{
+          name:utils.assetsPath('font/[name].bundle.[ext]')
+        }
+      },
+      {
         test: /\.html$/,
         loader: 'html-loader' // 处理html中img的url路径
       },
       {
         test: /\.md$/,
-        loader: ['html-loader','markdown-loader'] // 处理html中img的url路径
+        use: [{
+            loader: "html-loader"
+          },
+          {
+            loader: "markdown-loader",
+            options: {
+              pedantic: false,
+              renderer,
+            }
+          }
+        ]
       }
     ]
   },
@@ -84,13 +106,11 @@ module.exports = {
       chunksSortMode: 'manual',
       chunks: ['common', 'main'],
     }),
-    new CopyWebpackPlugin([
-      {
-        from: path.resolve(__dirname, '../static'),
-        to: config.dev.assetsSubDirectory,
-        ignore: ['.*']
-      }
-    ]),
+    new CopyWebpackPlugin([{
+      from: path.resolve(__dirname, '../static'),
+      to: config.dev.assetsSubDirectory,
+      ignore: ['.*']
+    }]),
     // new webpack.ProvidePlugin({
     //   $: 'jquery',
     //   jQuery: 'jquery'

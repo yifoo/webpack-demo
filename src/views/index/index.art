@@ -9,4 +9,5 @@
   <br>
   <div id="detail">
   </div>
+  <div class="show"></div>
 </div>

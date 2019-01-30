@@ -3,7 +3,7 @@
  * @Date: 2018-06-08 11:27:52 
  * @Desc: 开发环境
  * @Last Modified by: wuhao
- * @Last Modified time: 2019-01-07 13:18:25
+ * @Last Modified time: 2019-01-24 17:35:45
  */
 process.env.NODE_ENV = 'dev'; // webpack配置内部环境,要注意位置 
 const path = require('path');
@@ -47,7 +47,7 @@ module.exports = merge(common, {
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        loader:["style-loader",'css-loader'],
+        use:["style-loader",'css-loader'],
       },
       /*编译less并添加浏览器前缀*/
       /**添加publicPath: "../../"路径,解决css的背景图片路径 */

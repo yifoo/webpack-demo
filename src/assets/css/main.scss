@@ -47,6 +47,7 @@ input[type="button"]:disabled,button:disabled{
   background-color:#393D49;
   .tab{
     margin:1rem 0;
+    padding-left: 0;
   }
   .nav-item{
     color: #fff;
@@ -93,6 +94,7 @@ input[type="button"]:disabled,button:disabled{
       &:hover{
         color:#000;
         border-bottom:2px solid #009688;
+        text-decoration: none;
       }
       &.active{
         color:#000;

@@ -38,7 +38,7 @@ export default class QueueComponent {
     var markdown = require("./js.md")
     this.$el.find("#pre").html(markdown)
   }
-  render() {
+  render() {  
     var queue = require('./queue.art')
     this.$root.html(queue())
     this.$el = this.$root.children().first()

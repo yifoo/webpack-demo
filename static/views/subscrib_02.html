@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>发布订阅</title>
+</head>
+<body>
+  <div id="button">
+      <button id="btn1">添加事件1</button>
+      <button id="btn2">添加事件2</button>
+      <button id="btn3">添加事件3</button>
+  </div>
+  <script>
+    var subscrible = {
+      list:[],
+      listen:function(key,event){
+        if(!this.list[key]){
+          this.list[key]=[]
+        }
+        this.list[key].push(event)
+      },
+      trigger:function(key){
+        var fns = this.list[key]
+        if(!fns ||fns.length===0){
+          return false
+        }
+        for(var i=0;i<fns.length;i++){
+          fn = fns[i]
+          fn()
+        }
+      }
+    };
+    document.querySelector('#button').addEventListener("click",function(e){
+      subscrible.listen(e.target.id,function(){
+        console.log(e.target.textContent)
+      })
+      console.log('订阅',subscrible.list)
+    })
+  
+  </script>
+</body>
+</html>

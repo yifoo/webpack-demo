@@ -1,0 +1,7 @@
+<div class="login">
+  <h1>观察者模式----案例</h1>
+  <div class="uname">请登录</div>
+  <div class="address">地址</div>
+  <div class="avatar">地头像</div>
+  <button id="login">登录</button>
+</div>

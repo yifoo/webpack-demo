@@ -3,7 +3,7 @@
  * @Date: 2018-11-13 10:30:50 
  * @Desc: 状态管理
  * @Last Modified by: wuhao
- * @Last Modified time: 2018-12-09 00:35:55
+ * @Last Modified time: 2019-01-24 16:20:44
  */
 import Subject from './Subject'
 export default class Store {

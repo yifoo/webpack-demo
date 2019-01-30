@@ -9,6 +9,10 @@ export default class Mvvm {
     }
     this.newData = {}
     this.watch()
+    console.group('data',this.data);
+    console.groupEnd();
+    console.group('newData',this.newData);
+    console.groupEnd();
     this.events={
       "input #input" : 'handleInput'
     }
@@ -23,11 +27,9 @@ export default class Mvvm {
       ((key)=>{
         Object.defineProperty(self.newData,key,{
           get(){
-            console.log('get',self.data[key])
             return self.data[key]
           },
           set(newVal){
-            console.log('set',newVal)
             self.data[key] = newVal
             if(key==='value'){
               self.$el.find('#prev').text("数据:"+newVal)
