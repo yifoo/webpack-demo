@@ -3,13 +3,13 @@
  * @Date: 2018-07-06 10:53:01 
  * @Desc: webpack打包入口
  * @Last Modified by: wuhao
- * @Last Modified time: 2019-01-24 17:58:01
+ * @Last Modified time: 2019-01-30 17:52:16
  */
 import "babel-polyfill";
 import '@/assets/css/normalize.css';
 import '@/assets/css/base.scss';
 import '@/assets/css/main.scss';
-import '@/assets/css/github.less';
+// import '@/assets/css/github.less';
 import '@/assets/css/catfish.css';
 
 import $ from 'jquery'

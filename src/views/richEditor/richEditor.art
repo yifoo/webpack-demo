@@ -1,5 +1,0 @@
-<div class="editor">
-  <h1>富文本编辑</h1>
-  <br>
-  <script id="editor" type="text/plain" style="width:600px;height:300px;"></script>
-</div>

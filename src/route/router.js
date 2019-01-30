@@ -12,7 +12,6 @@ export default class Router {
       '/design/subscribe': 'views/design/subscribe/index',
       '/design/proxy': 'views/design/proxy/index',
       '/design/login': 'views/design/login',
-      '/design/store': 'views/design/store',
       '/state': 'views/state/stateDemo',
       '/state/sub': 'views/state/components/subState',
       '/dom': 'views/visualDom/visualDom',
@@ -27,7 +26,6 @@ export default class Router {
       '/data': 'views/dataStructure',
       '/data/stack': 'views/dataStructure/stack/stack',
       '/data/queue': 'views/dataStructure/queue/queue',
-      '/editor': 'views/richEditor',
       '/error': 'views/error/error'
     }
     // 组件挂载根元素
