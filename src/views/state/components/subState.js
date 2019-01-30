@@ -1,12 +1,11 @@
-import StateChange from '@/common/lib/store/StateChange'
-import store from '@/common/lib/store/StoreComponent'
+import StateChange from '@/common/lib/store/stateChange'
+import store from '@/common/lib/store/store'
 export default class Detail extends StateChange{
   constructor($root) {
-    super({
-      store,
-    })
+    super()
     // 改变挂载点
     this.$root = $('#detail')
+    this.componentName = 'SubState'
     this.render()
     this.events={
       'click #minus': 'mutationMinus',

@@ -1,48 +1,65 @@
-/*
- * @Author: wuhao 
- * @Date: 2018-11-27 23:21:32 
- * @Desc: 订阅主题模块
- * @Last Modified by: wuhao
- * @Last Modified time: 2018-12-09 00:35:55
- */
-export default class Subject {
+class Subject {
   constructor() {
-    this.events = {}
+    this.eventList = []
   }
   /**
-   * 订阅
-   * @param  event 
-   * @param  callback 
-   * @description 判断传递的event事件是否存在事件池中,如果存在,在该事件数组中追加一个新的方法
+   * 订阅主题
+   * @param {string} name 事件名称
+   * @param {function} fn 事件方法
    */
-  subscribe(event, callback) {
-    var self = this
-    // 如果没有该事件序列,就赋值空数组
-    if (!self.events.hasOwnProperty(event)) {
-      self.events[event] = []
+  subscribe(name, fn) {
+    if (!this.eventList.hasOwnProperty(name)) {
+      this.eventList[name] = []
     }
-    return self.events[event].push(callback);
+    this.eventList[name].push(fn)
+    console.log('this.eventList: ', this.eventList);
   }
   /**
-   * 取消订阅 从订阅主题事件数组中移除事件
-   * @param  event 
-   * @param  index 
+   * 取消订阅主题
+   * @param {string} name 事件名称
+   * @param {function} fn 事件方法
    */
-  unsubscribe(event, index) {
-    return this.events[event].splice(index, 1)
-  }
-  /**
-   * 发布
-   * @param  event 
-   * @param  data 
-   * @description 判断传递的event事件是否存在事件池中,如果存在,遍历执行该事件数组中所有方法
-   */
-  publish(event, data = {}) {
-    // 如果没有该事件序列,直接返回
-    if (!this.events.hasOwnProperty(event)) {
-      return []
+  unsubscribe(name, fn) {
+    var fns = this.eventList[name];
+    if (!fns || fns.length == 0) { // 如果没有订阅该事件,直接返回
+      return false
     }
-    // 遍历执行该事件序列
-    return this.events[event].map(callback => callback(data))
+    if (!fn) { // 如果传入具体函数,表示取消所有对应name的订阅
+      fns.length = 0
+    } else {
+      for (var i = 0; i < fns.length; i++) {
+        if (fn == fns[i]) {
+          fns.splice(i, 1);
+        }
+      }
+    }
   }
+  /**
+   * 发布主题,触发订阅事件
+   */
+  pulish() {
+    var name = Array.prototype.shift.call(arguments)
+    var fns = this.eventList[name]
+    if (!fns || fns.length == 0) { // 没有订阅该事件
+      return false
+    }
+    for (var i = 0, fn; i < fns.length; i++) {
+      fn = fns[i]
+      fn.apply(this, arguments)
+    }
+  }
+}
+
+
+class Observer {
+  constructor(subject, name, fn) {
+    this.subject = subject
+    this.name = name
+    this.subject.subscribe(name, fn)
+  }
+}
+
+export {
+  Subject,
+  Observer
 }

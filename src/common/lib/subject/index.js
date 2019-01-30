@@ -48,9 +48,8 @@ class Observer {
     console.log(`${this.key} 更新, 登录状态: ${this.subject.getState()}`)
   }
 }
-var instanceSubject = new Subject()
 export {
   Subject,
-  Observer,
-  instanceSubject
+  Observer
 }
+

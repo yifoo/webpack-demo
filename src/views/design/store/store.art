@@ -1,0 +1,4 @@
+<div class="store">
+  <h1>测试状态管理</h1>
+  <button id="store">测试</button>
+</div>

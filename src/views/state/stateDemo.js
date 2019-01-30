@@ -1,10 +1,8 @@
-import StateChange from '@/common/lib/store/StateChange'
-import store from '@/common/lib/store/StoreComponent'
+import StateChange from '@/common/lib/store/stateChange'
+import store from '@/common/lib/store/store'
 export default class StateDemo extends StateChange {
   constructor($root) {
-    super({
-      store
-    })
+    super()
     this.$root = $root
     this.render()
     this.events = {
@@ -26,11 +24,11 @@ export default class StateDemo extends StateChange {
     var count = store.state.count;
     count++
     store.commit('addCount', count)
+
   }
   dispatchAdd() {
     var count = store.state.count;
     count += 2
     store.dispatch('updateCount', count)
-    console.log('state.count:', store.state.count)
   }
 }

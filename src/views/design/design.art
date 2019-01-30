@@ -5,6 +5,7 @@
       <li class='tab-link'><a href="#/design/proxy">代理模式</a></li>
       <li class='tab-link'><a href="#/design/subscribe">观察者模式</a></li>
       <li class='tab-link'><a href="#/design/login">监听登录</a></li>
+      <li class='tab-link'><a href="#/design/store">状态管理</a></li>
     </ul>
   </div>
   <section id='section' class='section'></section>

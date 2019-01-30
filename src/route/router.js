@@ -1,3 +1,4 @@
+import store from '@/common/lib/store/store'
 export default class Router {
   constructor(obj) {
     this.mode = obj.mode
@@ -11,6 +12,7 @@ export default class Router {
       '/design/subscribe': 'views/design/subscribe/index',
       '/design/proxy': 'views/design/proxy/index',
       '/design/login': 'views/design/login',
+      '/design/store': 'views/design/store',
       '/state': 'views/state/stateDemo',
       '/state/sub': 'views/state/components/subState',
       '/dom': 'views/visualDom/visualDom',
@@ -129,6 +131,11 @@ export default class Router {
         this.handleSubRouter(item, index)
       } else {
         this.controller(this.name)
+        if(this.oldURL&&this.oldURL[0] != this.currentURLlist[0]){
+          console.log('解绑状态监听事件')
+          store.getSubject().unsubscribe('stateChange')
+        }
+        
       }
     });
     // 记录链接数组,后续处理子级组件
@@ -145,6 +152,8 @@ export default class Router {
       // 相同路由部分不重新加载
       if (item !== this.oldURL[index]) {
         this.controller(this.name)
+        console.log('解绑状态监听事件')
+        store.getSubject().unsubscribe('stateChange')
       }
     }
     // 新路由是旧路由的父级

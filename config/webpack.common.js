@@ -20,7 +20,6 @@ function resolve(dir) {
 }
 module.exports = {
   context: path.resolve(__dirname, '../'),
-  devtool: config.dev.devtool,
   entry: { //入口
     main: path.resolve(__dirname, '../src/main.js'),
   },
