@@ -1,62 +1,4 @@
-@font-face {
-  font-family: Source Han Sans SC;
-  font-weight: normal;
-  src: local('Source Han Sans SC Regular'), url("catfish/SourceHanSansSC-Regular.otf");
-}
 
-@font-face {
-  font-family: Source Han Sans;
-  font-weight: bold;
-  src: local('Source Han Sans SC Bold'), url("catfish/SourceHanSansSC-Bold.otf");
-}
-
-@font-face {
-  font-family: Source Han Serif;
-  font-weight: normal;
-  src: local('Source Han Serif SC Regular'), url("catfish/SourceHanSerifSC-Regular.otf");
-}
-
-@font-face {
-  font-family: Source Han Serif;
-  font-weight: bold;
-  src: local('Source Han Serif SC Bold'), url("catfish/SourceHanSerifSC-Bold.otf");
-}
-
-@font-face {
-  font-family: 'Source Code Pro';
-  font-weight: 300;
-  font-style: normal;
-  font-stretch: normal;
-  src: url('./catfish/SourceCodePro-Regular.otf') format('opentype');
-}
-
-@font-face {
-  font-family: mononoki;
-  font-style: normal;
-  font-weight: normal;
-  src: local('mononoki Regular'), url("catfish/mononoki-Regular.woff");
-}
-
-@font-face {
-  font-family: mononoki;
-  font-style: italic;
-  font-weight: normal;
-  src: local('mononoki Italic'), url("catfish/mononoki-Italic.woff");
-}
-
-@font-face {
-  font-family: mononoki;
-  font-style: normal;
-  font-weight: bold;
-  src: local('mononoki Bold'), url("catfish/mononoki-Bold.woff");
-}
-
-@font-face {
-  font-family: mononoki;
-  font-style: italic;
-  font-weight: bold;
-  src: local('mononoki Bold Italic'), url("catfish/mononoki-BoldItalic.woff");
-}
 
 html {
   font-size: 16px;
@@ -64,7 +6,7 @@ html {
 
 body {
   background: #fff;
-  font-family: Source Han Sans SC, sans-serif;
+  font-family: sans-serif;
   color: #2c3f51;
 }
 
@@ -155,7 +97,6 @@ code {
   color: #c7254e;
   border-radius: 4px;
   font-size: 0.9em;
-  font-family: 'Source Code Pro', monospace;
   white-space: normal;
   padding: 2px 4px;
 }
@@ -165,7 +106,6 @@ tt {
   margin: 0 0.3em;
   padding: 0 0.3em;
   background: #eee;
-  font-family: 'Source Code Pro', monospace;
   text-shadow: 0 1px #fff;
 }
 
@@ -489,12 +429,6 @@ tt {
   color: inherit;
 }
 
-header,
-.context-menu,
-.megamenu-content,
-footer {
-  font-family: Source Han Sans SC, sans-serif;
-}
 
 @media print {
   html {

@@ -3,8 +3,6 @@
   <div class="tab">
     <ul>
       <li class='tab-link'><a href="#/algorithm/bubbleSort">冒泡排序</a></li>
-      <li class='tab-link'><a href="#/algorithm/bubbleSort">冒泡排序</a></li>
-      <li class='tab-link'><a href="#/algorithm/bubbleSort">冒泡排序</a></li>
     </ul>
   </div>
   <section id='section' class='section'></section>

@@ -196,10 +196,6 @@ export default class Router {
       if (this.mode === 'history') {
         $("#main").find('a[href]').unbind('click').on('click', this.handleLink.bind(this))
       }
-    }).then(()=>{
-      document.querySelectorAll('code').forEach((block) => {
-        hljs.highlightBlock(block);
-      });
     })
   }
   /**

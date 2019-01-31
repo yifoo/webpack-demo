@@ -35,8 +35,6 @@ export default class QueueComponent {
     $root.find("a[href='#/data/queue']").addClass("active")
     this.render()
     this.init()
-    var markdown = require("./js.md")
-    this.$el.find("#pre").html(markdown)
   }
   render() {  
     var queue = require('./queue.art')

@@ -35,8 +35,6 @@ export default class StackComponent{
     $root.find("a[href='#/data/stack']").addClass("active")
     this.render()
     this.init()
-    var md = require("./js.md")
-    this.$el.find("#pre").html(markdown.makeHtml(md))
   }
   render(){
     var stack = require('./stack.art')
