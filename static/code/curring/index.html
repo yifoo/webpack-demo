@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>柯理化</title>
+  </head>
+  <body>
+    <pre>
+      var curring = function(fn){
+        var _args = [];
+        return function cb(){
+  
+            if(arguments.length === 0) {
+                return fn.apply(this, _args);
+            }
+            Array.prototype.push.apply(_args, [].slice.call(arguments));
+  
+            return cb;
+        } }
+  
+    var multi = function(){
+  
+        var total = 0;
+        var argsArray = Array.prototype.slice.call(arguments);
+            argsArray.forEach(function(item){
+                total += item;
+            })
+  
+        return total
+    };
+    var calc = curring(multi);
+    calc(1,2)(3)(4,5,6);
+    console.log(calc()); //空白调用时才真正计算
+   </pre
+    >
+    <script>
+      var curring = function(fn) {
+        var _args = [];
+        return function cb() {
+          if (arguments.length === 0) {
+            return fn.apply(this, _args);
+          }
+          Array.prototype.push.apply(_args, [].slice.call(arguments));
+
+          return cb;
+        };
+      };
+
+      var multi = function() {
+        var total = 0;
+        var argsArray = Array.prototype.slice.call(arguments);
+        argsArray.forEach(function(item) {
+          total += item;
+        });
+
+        return total;
+      };
+      var calc = curring(multi);
+      calc(1, 2)(3)(4, 5, 6);
+      console.log(calc()); //空白调用时才真正计算
+    </script>
+  </body>
+</html>

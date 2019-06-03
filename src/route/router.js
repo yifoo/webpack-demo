@@ -129,11 +129,11 @@ export default class Router {
         this.handleSubRouter(item, index)
       } else {
         this.controller(this.name)
-        if(this.oldURL&&this.oldURL[0] != this.currentURLlist[0]){
+        if (this.oldURL && this.oldURL[0] != this.currentURLlist[0]) {
           console.log('解绑状态监听事件')
           store.getSubject().unsubscribe('stateChange')
         }
-        
+
       }
     });
     // 记录链接数组,后续处理子级组件
