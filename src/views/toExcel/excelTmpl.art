@@ -47,10 +47,7 @@
         <td data-field="title" align="center" style="height:auto">
           <div class="layui-table-cell laytable-cell-1-title">测试意思下阿斯达</div>
         </td>
-        <td data-field="picUrl" align="center" data-content="http://hwpfiletest.mobile.taikang.com/file/bbfb2f597a014742a9ae6f4f603a155d.jpg"
-          style="height:auto">
-          <div class="layui-table-cell laytable-cell-1-picUrl"><img src="http://hwpfiletest.mobile.taikang.com/file/bbfb2f597a014742a9ae6f4f603a155d.jpg"></div>
-        </td>
+        
         <td data-field="labelList" align="center" data-content="[object Object]" style="height:auto">
           <div class="layui-table-cell laytable-cell-1-labelList"><span>金融</span></div>
         </td>
