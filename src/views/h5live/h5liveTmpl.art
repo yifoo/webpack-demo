@@ -1,8 +1,7 @@
 <div class="h5-live">
   <h1>live</h1>
   <video id="my-player" class="video-js" controls preload="auto">
-    <!-- <source src="http://hwpfiletest.mobile.taikang.com/file/mp4/edd4282dcf2740fb901f835f7297723c.mp4" type="video/mp4">
-    </source> -->
+   
     <!-- <source
      src="https://1256993030.vod2.myqcloud.com/d520582dvodtransgzp1256993030/cc9f922c5285890781386012275/v.f220.m3u8"
      type="application/x-mpegURL"> -->
