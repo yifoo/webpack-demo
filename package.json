@@ -49,6 +49,6 @@
     "art-template": "^4.13.1",
     "video.js": "^7.4.1",
     "videojs-contrib-hls": "^5.15.0",
-    "xlsx": "^0.14.1"
+    "xlsx": "^0.17.0"
   }
 }
